@@ -1,0 +1,128 @@
+hostname OLY-FW1
+domain-name hphs.lab
+enable password WdJQMntV/mB02tJF encrypted
+username labadmin password B./A.mwauXXICWJU encrypted privilege 15
+aaa authentication ssh console LOCAL
+aaa authentication serial console LOCAL
+banner login HPHS authorized lab access only. Activity is monitored. Follow the acceptable use policy.
+no http server enable
+ssh timeout 15
+same-security-traffic permit inter-interface
+same-security-traffic permit intra-interface
+no sysopt connection permit-vpn
+!
+interface GigabitEthernet0/0
+ description OLY-R1 border transit
+ nameif OUTSIDE
+ security-level 0
+ ip address 198.51.100.6 255.255.255.252
+ no shutdown
+!
+interface GigabitEthernet0/1
+ description 802.1Q trunk to OLY-SW1
+ no nameif
+ no ip address
+ no shutdown
+!
+interface Management0/0
+ shutdown
+ no nameif
+ no ip address
+!
+interface GigabitEthernet0/1.10
+ vlan 10
+ nameif CLIN
+ security-level 60
+ ip address 10.20.10.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/1.30
+ vlan 30
+ nameif IMG
+ security-level 50
+ ip address 10.20.30.1 255.255.255.0
+ no shutdown
+!
+interface GigabitEthernet0/1.99
+ vlan 99
+ nameif MGMT
+ security-level 100
+ ip address 10.20.99.1 255.255.255.0
+ no shutdown
+!
+route OUTSIDE 0.0.0.0 0.0.0.0 198.51.100.5 1
+!
+object-group network BLOCKED-DEST
+ network-object 10.0.0.0 255.0.0.0
+ network-object 172.16.0.0 255.240.0.0
+ network-object 192.168.0.0 255.255.0.0
+ network-object 198.51.100.0 255.255.255.248
+!
+dhcpd dns 1.1.1.1
+dhcpd lease 3600
+dhcpd address 10.20.10.100-10.20.10.149 CLIN
+dhcpd enable CLIN
+!
+access-list CLIN_IN extended permit udp any eq 68 host 255.255.255.255 eq 67
+access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 eq 68 host 10.20.10.1 eq 67
+access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.10.99.10 eq 8080
+access-list CLIN_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.10.99.10
+access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.20.30.10 eq 8080
+access-list CLIN_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.20.30.10
+access-list CLIN_IN extended deny ip 10.20.10.0 255.255.255.0 object-group BLOCKED-DEST log informational interval 1
+access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq 53
+access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq 53
+access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 any eq 80
+access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 any eq 443
+access-list CLIN_IN extended deny ip any any log informational interval 1
+!
+access-list IMG_IN extended permit tcp host 10.20.30.10 host 10.10.99.10 eq 8080
+access-list IMG_IN extended permit icmp host 10.20.30.10 host 10.10.99.10
+access-list IMG_IN extended deny ip host 10.20.30.10 object-group BLOCKED-DEST log informational interval 1
+access-list IMG_IN extended permit udp host 10.20.30.10 host 1.1.1.1 eq 53
+access-list IMG_IN extended permit tcp host 10.20.30.10 host 1.1.1.1 eq 53
+access-list IMG_IN extended permit tcp host 10.20.30.10 any eq 80
+access-list IMG_IN extended permit tcp host 10.20.30.10 any eq 443
+access-list IMG_IN extended deny ip any any log informational interval 1
+!
+access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq 22
+access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.2 eq 22
+access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 203.0.113.1 eq 22
+access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 203.0.113.5 eq 22
+access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.9 eq 22
+access-list MGMT_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq 123
+access-list MGMT_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq 514
+access-list MGMT_IN extended deny ip any any log informational interval 1
+!
+access-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq 22
+access-list OUTSIDE_IN extended permit tcp host 198.51.100.10 host 10.20.30.10 eq 22
+access-list OUTSIDE_IN extended permit tcp 10.10.10.0 255.255.255.0 host 10.20.30.10 eq 8080
+access-list OUTSIDE_IN extended permit icmp 10.10.10.0 255.255.255.0 host 10.20.30.10
+access-list OUTSIDE_IN extended permit icmp host 10.10.99.10 10.20.0.0 255.255.0.0
+access-list OUTSIDE_IN extended permit tcp host 10.10.99.10 host 10.20.30.10 eq 8080
+access-list OUTSIDE_IN extended deny ip any any log informational interval 1
+!
+access-group CLIN_IN in interface CLIN
+access-group IMG_IN in interface IMG
+access-group MGMT_IN in interface MGMT
+access-group OUTSIDE_IN in interface OUTSIDE
+!
+class-map inspection_default
+ match default-inspection-traffic
+policy-map global_policy
+ class inspection_default
+  inspect icmp
+service-policy global_policy global
+!
+logging enable
+logging timestamp
+logging device-id hostname
+logging buffered informational
+logging trap informational
+logging host OUTSIDE 10.10.99.10
+ntp server 10.10.99.10 source OUTSIDE prefer
+!
+ssh 10.20.99.0 255.255.255.0 MGMT
+ssh 10.10.99.0 255.255.255.0 OUTSIDE
+icmp permit 198.51.100.5 255.255.255.255 OUTSIDE
+icmp permit 10.10.99.10 255.255.255.255 OUTSIDE
