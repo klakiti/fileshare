@@ -1,0 +1,178 @@
+#cloud-config
+
+hostname: TAC-Services
+manage_etc_hosts: true
+
+users:
+  - default
+  - name: cisco
+    groups:
+      - sudo
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: false
+
+  - name: vendor
+    shell: /bin/bash
+    lock_passwd: true
+
+ssh_pwauth: true
+
+chpasswd:
+  expire: false
+  users:
+    - name: cisco
+      password: cisco1
+      type: text
+
+package_update: true
+
+packages:
+  - nginx
+  - openssh-server
+  - chrony
+  - rsyslog
+
+write_files:
+
+  # -----------------------------
+  # NTP server configuration
+  # -----------------------------
+  - path: /tmp/hphs-chrony.conf
+    permissions: '0644'
+    content: |
+      pool pool.ntp.org iburst
+      driftfile /var/lib/chrony/chrony.drift
+      makestep 1.0 3
+      rtcsync
+
+      # HPHS networks that may use this server for NTP
+      allow 10.10.0.0/16
+      allow 10.20.0.0/16
+
+      # OLY-FW1 sources NTP from its OUTSIDE interface
+      allow 198.51.100.6/32
+
+  # -----------------------------
+  # Remote syslog receiver
+  # -----------------------------
+  - path: /tmp/hphs-rsyslog.conf
+    permissions: '0644'
+    content: |
+      module(load="imudp")
+      input(type="imudp" port="514")
+
+      if ($inputname == "imudp") then {
+          action(type="omfile" file="/var/log/hphs-network.log")
+          stop
+      }
+
+  # -----------------------------
+  # EHR and billing test services
+  # -----------------------------
+  - path: /tmp/hphs-nginx.conf
+    permissions: '0644'
+    content: |
+      server {
+          listen 8080;
+          server_name _;
+          root /srv/hphs/ehr;
+          index index.html;
+      }
+
+      server {
+          listen 8081;
+          server_name _;
+          root /srv/hphs/billing;
+          index index.html;
+      }
+
+  # -----------------------------
+  # Login warning
+  # -----------------------------
+  - path: /tmp/hphs-banner
+    permissions: '0644'
+    content: |
+      HPHS AUTHORIZED ACCESS ONLY.
+      Activity may be monitored and logged.
+      Disconnect if you are not an authorized user.
+
+  # -----------------------------
+  # Restricted vendor command
+  # -----------------------------
+  - path: /tmp/hphs-vendor-status
+    permissions: '0755'
+    content: |
+      #!/bin/bash
+      case "${SSH_ORIGINAL_COMMAND:-}" in
+        ""|status)
+          echo "HPHS EHR Vendor Status"
+          hostname
+          uptime
+          ;;
+        *)
+          echo "Denied: only the status command is authorized."
+          exit 1
+          ;;
+      esac
+
+  # -----------------------------
+  # SSH access policy
+  # -----------------------------
+  - path: /tmp/hphs-ssh.conf
+    permissions: '0644'
+    content: |
+      Banner /etc/issue.net
+
+      # Normal administration only from HPHS management VLANs
+      AllowUsers cisco@10.10.99.0/24 cisco@10.20.99.0/24 vendor@198.51.100.10
+
+      # Vendor must authenticate with an SSH key.
+      Match User vendor
+          PasswordAuthentication no
+          KbdInteractiveAuthentication no
+          AuthenticationMethods publickey
+          ForceCommand /usr/local/bin/hphs-vendor-status
+          DisableForwarding yes
+          PermitTTY no
+
+      Match all
+
+runcmd:
+
+  # Create application directories and simple test resources
+  - mkdir -p /srv/hphs/ehr
+  - mkdir -p /srv/hphs/billing
+
+  - printf '<html><body><h1>HPHS EHR Test Resource</h1></body></html>\n' > /srv/hphs/ehr/index.html
+  - printf '<html><body><h1>HPHS Billing Test Resource</h1></body></html>\n' > /srv/hphs/billing/index.html
+
+  # Install service configuration
+  - install -m 0644 /tmp/hphs-chrony.conf /etc/chrony/chrony.conf
+  - install -m 0644 /tmp/hphs-rsyslog.conf /etc/rsyslog.d/20-hphs-network.conf
+
+  - rm -f /etc/nginx/sites-enabled/default
+  - install -m 0644 /tmp/hphs-nginx.conf /etc/nginx/sites-available/hphs
+  - ln -sf /etc/nginx/sites-available/hphs /etc/nginx/sites-enabled/hphs
+
+  - install -m 0644 /tmp/hphs-banner /etc/issue.net
+  - install -m 0755 /tmp/hphs-vendor-status /usr/local/bin/hphs-vendor-status
+  - install -m 0644 /tmp/hphs-ssh.conf /etc/ssh/sshd_config.d/60-hphs.conf
+
+  # Validate configurations
+  - nginx -t
+  - rsyslogd -N1
+  - sshd -t
+
+  # Start and enable services
+  - systemctl enable nginx
+  - systemctl enable ssh
+  - systemctl enable chrony
+  - systemctl enable rsyslog
+
+  - systemctl restart nginx
+  - systemctl restart ssh
+  - systemctl restart chrony
+  - systemctl restart rsyslog
+
+  - echo "HPHS TAC-Services provisioning complete" > /var/log/hphs-setup.complete
