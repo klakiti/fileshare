@@ -81,42 +81,51 @@ nodes:
   - name: ios_config.txt
     content: "Building configuration...\n\nCurrent configuration : 4136 bytes\n!\n! Last configuration change at 04:04:28\
       \ UTC Thu Oct 1 2026\n!\nversion 17.16\nservice timestamps debug datetime msec\nservice timestamps log datetime msec\n\
-      !\nhostname ISP-Central\n!\nenable secret 0 cisco1\nusername cisco privilege 15 secret 0 cisco1\n!\nboot-start-marker\n\
-      boot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nlogin on-success\
-      \ log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint TP-self-signed-131184643\n enrollment selfsigned\n\
-      \ subject-name cn=IOS-Self-Signed-Certificate-131184643\n revocation-check none\n rsakeypair TP-self-signed-131184643\n\
-      \ hash sha512\n!\n!\ncrypto pki certificate chain TP-self-signed-131184643\n certificate self-signed 01\n  3082032E\
-      \ 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 0D050030\n  30312E30 2C060355 04030C25 494F532D 53656C66 2D536967\
-      \ 6E65642D 43657274\n  69666963 6174652D 31333131 38343634 33301E17 0D323630 39313932 33303230\n  325A170D 33363039\
-      \ 31383233 30323032 5A303031 2E302C06 03550403 0C25494F\n  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3133\
-      \ 31313834\n  36343330 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02\n  82010100 B3C3C745 FC06E019\
-      \ 0DFA891E D8E484E1 0CF3FC3C 6FB5D4AD 1D410999\n  2D1ED7B4 0E940F4D 1A4ED8DF CA8B51B3 FF360EA3 74AEE709 488C6C8F AAD5817D\n\
-      \  850508CF D6F01061 B74122F8 393CCE50 F796F70C A096C1E4 04BC5EA8 151DF7B1\n  A4359E71 6E4EF927 0D14710D B510AE54 5E692563\
-      \ 79F08161 2531A300 38BD501A\n  EE7388AB 447EA79B 779AD061 7D8CB0DB 2106939F 8C429E31 37603070 36A87E4A\n  3CD2210B\
-      \ B594BE7E F5A53622 258C3F6C 53005A67 2261DD8D 2EDACAB5 524A4F7E\n  2D9AD58E E94FB0F1 60EAB2F0 E265F86C CB8F7FFA BD320660\
-      \ 86E8E682 E321202F\n  BCC6A4C5 68279A77 7C572546 2346A5A8 47AEBD19 1F21A8D6 2AB3596E F13D2A45\n  45C71EEB 02030100\
-      \ 01A35330 51301D06 03551D0E 04160414 8ED8B9A9 AC6A8ABE\n  1125BF11 D6A988B0 3EBB2DF8 301F0603 551D2304 18301680 148ED8B9\
-      \ A9AC6A8A\n  BE1125BF 11D6A988 B03EBB2D F8300F06 03551D13 0101FF04 05300301 01FF300D\n  06092A86 4886F70D 01010D05\
-      \ 00038201 0100852D 6A79FCF7 41CACA39 3F127877\n  148E4B9F 538567EA 3553AECA 8C099284 8A884E56 1EE87569 02159B1C 788343C7\n\
-      \  16851FD0 8C0D1A44 A70CDA8F 5B3F3032 6CF8DC4A 7AABC9E5 5E46DD21 CB22763B\n  5B220B83 DB5AEAE0 748FF033 4EDD1EBC 8657D338\
-      \ 5C74B898 9CAC7A61 4D698B8B\n  0A8DDE54 C4872374 0D55F087 04309CCA B7C6D8CD 88B32DEF CBC1B5C7 13B66829\n  27A82E96\
-      \ 5FA68EF0 C5A87E0A 8923BCC4 896824C9 B761216D 45D6C907 686F86A3\n  14A2142A CD1A4F7B 46277BB6 6BE275B4 B48C7E7C 7CC20544\
-      \ 7D51B422 3A9AA004\n  0803DC9D 1B3DBE80 5E4F6ACB 91598A28 652F13D2 0072F314 B889A65F F2E6D591\n  C8D1793E 6D5842E4\
-      \ 9890BB47 0B65621A C259\n  \tquit\n!\n!\nmemory free low-watermark processor 79983\n!\n!\nspanning-tree mode rapid-pvst\n\
-      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description Internet Access\n\
-      \ ip address dhcp\n ip nat outside\n!\ninterface Ethernet0/1\n no ip address\n shutdown\n!\ninterface Ethernet0/2\n\
-      \ no ip address\n shutdown\n!\ninterface Ethernet0/3\n no ip address\n shutdown\n!\ninterface Ethernet1/0\n description\
-      \ External vendor\n ip address 198.51.100.9 255.255.255.248\n ip nat inside\n!\ninterface Ethernet1/1\n no ip address\n\
-      \ shutdown\n!\ninterface Ethernet1/2\n no ip address\n shutdown\n!\ninterface Ethernet1/3\n no ip address\n shutdown\n\
-      !\ninterface Ethernet2/0\n description Interface to Tacoma Site\n ip address 203.0.113.1 255.255.255.252\n ip nat inside\n\
-      !\ninterface Ethernet2/1\n no ip address\n shutdown\n!\ninterface Ethernet2/2\n no ip address\n shutdown\n!\ninterface\
-      \ Ethernet2/3\n no ip address\n shutdown\n!\ninterface Ethernet3/0\n description Interface to Olympia Site\n ip address\
-      \ 203.0.113.5 255.255.255.252\n ip nat inside\n!\ninterface Ethernet3/1\n no ip address\n shutdown\n!\ninterface Ethernet3/2\n\
-      \ no ip address\n shutdown\n!\ninterface Ethernet3/3\n no ip address\n shutdown\n!\nip forward-protocol nd\nip forward-protocol\
-      \ udp\n!\n!\nip http server\nip http secure-server\nip nat inside source list NAT-INTERNET interface Ethernet0/0 overload\n\
-      ip route 0.0.0.0 0.0.0.0 dhcp\nip ssh bulk-mode 131072\n!\nip access-list standard NAT-INTERNET\n 10 permit any\nno\
-      \ logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n login local\n\
-      line aux 0\nline vty 0 4\n exec-timeout 0 0\n transport input ssh\n login local\n!\n!\n!\n!\nend"
+      !\nhostname ISP-Central\nip domain name hphs.lab\n!\nenable secret 0 cisco1\nusername cisco privilege 15 secret 0 cisco1\n\
+      !\nboot-start-marker\nboot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\nip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint TP-self-signed-131184643\n\
+      \ enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-131184643\n revocation-check none\n rsakeypair\
+      \ TP-self-signed-131184643\n hash sha512\n!\n!\ncrypto pki certificate chain TP-self-signed-131184643\n certificate\
+      \ self-signed 01\n  3082032E 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 0D050030\n  30312E30 2C060355 04030C25\
+      \ 494F532D 53656C66 2D536967 6E65642D 43657274\n  69666963 6174652D 31333131 38343634 33301E17 0D323630 39313932 33303230\n\
+      \  325A170D 33363039 31383233 30323032 5A303031 2E302C06 03550403 0C25494F\n  532D5365 6C662D53 69676E65 642D4365 72746966\
+      \ 69636174 652D3133 31313834\n  36343330 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02\n  82010100\
+      \ B3C3C745 FC06E019 0DFA891E D8E484E1 0CF3FC3C 6FB5D4AD 1D410999\n  2D1ED7B4 0E940F4D 1A4ED8DF CA8B51B3 FF360EA3 74AEE709\
+      \ 488C6C8F AAD5817D\n  850508CF D6F01061 B74122F8 393CCE50 F796F70C A096C1E4 04BC5EA8 151DF7B1\n  A4359E71 6E4EF927\
+      \ 0D14710D B510AE54 5E692563 79F08161 2531A300 38BD501A\n  EE7388AB 447EA79B 779AD061 7D8CB0DB 2106939F 8C429E31 37603070\
+      \ 36A87E4A\n  3CD2210B B594BE7E F5A53622 258C3F6C 53005A67 2261DD8D 2EDACAB5 524A4F7E\n  2D9AD58E E94FB0F1 60EAB2F0\
+      \ E265F86C CB8F7FFA BD320660 86E8E682 E321202F\n  BCC6A4C5 68279A77 7C572546 2346A5A8 47AEBD19 1F21A8D6 2AB3596E F13D2A45\n\
+      \  45C71EEB 02030100 01A35330 51301D06 03551D0E 04160414 8ED8B9A9 AC6A8ABE\n  1125BF11 D6A988B0 3EBB2DF8 301F0603 551D2304\
+      \ 18301680 148ED8B9 A9AC6A8A\n  BE1125BF 11D6A988 B03EBB2D F8300F06 03551D13 0101FF04 05300301 01FF300D\n  06092A86\
+      \ 4886F70D 01010D05 00038201 0100852D 6A79FCF7 41CACA39 3F127877\n  148E4B9F 538567EA 3553AECA 8C099284 8A884E56 1EE87569\
+      \ 02159B1C 788343C7\n  16851FD0 8C0D1A44 A70CDA8F 5B3F3032 6CF8DC4A 7AABC9E5 5E46DD21 CB22763B\n  5B220B83 DB5AEAE0\
+      \ 748FF033 4EDD1EBC 8657D338 5C74B898 9CAC7A61 4D698B8B\n  0A8DDE54 C4872374 0D55F087 04309CCA B7C6D8CD 88B32DEF CBC1B5C7\
+      \ 13B66829\n  27A82E96 5FA68EF0 C5A87E0A 8923BCC4 896824C9 B761216D 45D6C907 686F86A3\n  14A2142A CD1A4F7B 46277BB6\
+      \ 6BE275B4 B48C7E7C 7CC20544 7D51B422 3A9AA004\n  0803DC9D 1B3DBE80 5E4F6ACB 91598A28 652F13D2 0072F314 B889A65F F2E6D591\n\
+      \  C8D1793E 6D5842E4 9890BB47 0B65621A C259\n  \tquit\n!\n!\nmemory free low-watermark processor 79983\n!\n!\nspanning-tree\
+      \ mode rapid-pvst\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description\
+      \ Internet Access\n ip address dhcp\n ip nat outside\n!\ninterface Ethernet0/1\n no ip address\n shutdown\n!\ninterface\
+      \ Ethernet0/2\n no ip address\n shutdown\n!\ninterface Ethernet0/3\n no ip address\n shutdown\n!\ninterface Ethernet1/0\n\
+      \ description External vendor\n ip address 198.51.100.9 255.255.255.248\n ip nat inside\n!\ninterface Ethernet1/1\n\
+      \ no ip address\n shutdown\n!\ninterface Ethernet1/2\n no ip address\n shutdown\n!\ninterface Ethernet1/3\n no ip address\n\
+      \ shutdown\n!\ninterface Ethernet2/0\n description Interface to Tacoma Site\n ip address 203.0.113.1 255.255.255.252\n\
+      \ ip nat inside\n!\ninterface Ethernet2/1\n no ip address\n shutdown\n!\ninterface Ethernet2/2\n no ip address\n shutdown\n\
+      !\ninterface Ethernet2/3\n no ip address\n shutdown\n!\ninterface Ethernet3/0\n description Interface to Olympia Site\n\
+      \ ip address 203.0.113.5 255.255.255.252\n ip nat inside\n!\ninterface Ethernet3/1\n no ip address\n shutdown\n!\ninterface\
+      \ Ethernet3/2\n no ip address\n shutdown\n!\ninterface Ethernet3/3\n no ip address\n shutdown\n!\nip forward-protocol\
+      \ nd\nip forward-protocol udp\n!\n!\nip http server\nip http secure-server\nip nat inside source list NAT-INTERNET interface\
+      \ Ethernet0/0 overload\nip route 0.0.0.0 0.0.0.0 dhcp\nip ssh bulk-mode 131072\n!\nip access-list standard NAT-INTERNET\n\
+      \ 10 permit any\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nbanner login #\nThis is a private computer network\
+      \ operated by Harbor Point Health Services. Access to\nthis network, its infrastructure, and all connected electronic\
+      \ systems is restricted\nsolely to authorized individuals for legitimate business purposes.\n\nUnauthorized login, access,\
+      \ or use of this resource is strictly prohibited. It is\nsubject to civil, criminal, and administrative penalties.\n\
+      \nBy attempting to log in, you explicitly acknowledge and agree that:\n\n* You are an authorized user acting within\
+      \ your permitted scope.\n\n* You have no expectation of privacy regarding any activity on this network.\n\n* All activities,\
+      \ communications, and data may be monitored, intercepted, recorded,\nread, or copied by authorized personnel.\n\n* Evidence\
+      \ of unauthorized use or illegal activity will be disclosed to corporate\nmanagement and law enforcement officials.\n\
+      \nIf you are not an authorized user of this system, DISCONNECT IMMEDIATELY.\n#\n!\nline con 0\n exec-timeout 0 0\n logging\
+      \ synchronous\n login local\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n transport input ssh\n login local\n!\n!\n\
+      !\n!\nend"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -203,406 +212,188 @@ nodes:
 - boot_disk_size: null
   configuration:
   - name: day0-config
-    content: |-
-      : Saved
-
-      :
-      : Serial Number: 9AL9N432BNL
-      : Hardware:   ASAv, 2048 MB RAM, CPU Xeon 5500 series 2000 MHz
-      :
-      ASA Version 9.23(1)
-      !
-      hostname TAC-FW1
-      domain-name hphs.lab
-      enable password cisco12!@
-      username cisco password cisco12!@ privilege 15
-      service-module 0 keepalive-timeout 4
-      service-module 0 keepalive-counter 6
-      names
-      no mac-address auto
-
-      !
-      interface GigabitEthernet0/0
-       description TAC-R1 border transit
-       nameif OUTSIDE
-       security-level 0
-       ip address 198.51.100.2 255.255.255.252
-      !
-      interface GigabitEthernet0/1
-       description 802.1Q trunk to TAC-SW1
-       no nameif
-       no security-level
-       no ip address
-      !
-      interface GigabitEthernet0/1.10
-       vlan 10
-       nameif CLIN
-       security-level 60
-       ip address 10.10.10.1 255.255.255.0
-      !
-      interface GigabitEthernet0/1.20
-       vlan 20
-       nameif ADMIN
-       security-level 70
-       ip address 10.10.20.1 255.255.255.0
-      !
-      interface GigabitEthernet0/1.40
-       vlan 40
-       nameif GUEST
-       security-level 10
-       ip address 10.10.40.1 255.255.255.0
-      !
-      interface GigabitEthernet0/1.99
-       vlan 99
-       nameif MGMT
-       security-level 100
-       ip address 10.10.99.1 255.255.255.0
-      !
-      interface Management0/0
-       no management-only
-       shutdown
-       no nameif
-       no security-level
-       no ip address
-      !
-      banner login HPHS authorized lab access only. Activity is monitored. Follow the acceptable use policy.
-      ftp mode passive
-      dns server-group DefaultDNS
-       domain-name hphs.lab
-      same-security-traffic permit inter-interface
-      same-security-traffic permit intra-interface
-      no object-group-search access-control
-      object-group network PUBLIC-DNS
-       network-object host 1.1.1.1
-       network-object host 1.0.0.1
-      object-group network BLOCKED-DEST
-       network-object 10.0.0.0 255.0.0.0
-       network-object 172.16.0.0 255.240.0.0
-       network-object 192.168.0.0 255.255.0.0
-       network-object 198.51.100.0 255.255.255.248
-      access-group OUTSIDE_IN in interface OUTSIDE
-      access-group CLIN_IN in interface CLIN
-      access-group ADMIN_IN in interface ADMIN
-      access-group GUEST_IN in interface GUEST
-      access-group MGMT_IN in interface MGMT
-      access-list CLIN_IN extended permit icmp any any
-      access-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list CLIN_IN extended permit udp any eq bootpc host 255.255.255.255 eq bootps
-      access-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 eq bootpc host 10.10.10.1 eq bootps
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 host 10.10.99.10 eq 8080
-      access-list CLIN_IN extended permit icmp 10.10.10.0 255.255.255.0 host 10.10.99.10
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 host 10.20.30.10 eq 8080
-      access-list CLIN_IN extended permit icmp 10.10.10.0 255.255.255.0 host 10.20.30.10
-      access-list CLIN_IN extended deny ip 10.10.10.0 255.255.255.0 object-group BLOCKED-DEST log interval 1
-      access-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 any eq www
-      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 any eq https
-      access-list CLIN_IN extended deny ip any any log interval 1
-      access-list ADMIN_IN extended permit icmp any any
-      access-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list ADMIN_IN extended permit udp any eq bootpc host 255.255.255.255 eq bootps
-      access-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 eq bootpc host 10.10.20.1 eq bootps
-      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 host 10.10.99.10 eq 8081
-      access-list ADMIN_IN extended permit icmp 10.10.20.0 255.255.255.0 host 10.10.99.10
-      access-list ADMIN_IN extended deny ip 10.10.20.0 255.255.255.0 object-group BLOCKED-DEST log interval 1
-      access-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 any eq www
-      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 any eq https
-      access-list ADMIN_IN extended deny ip any any log interval 1
-      access-list GUEST_IN extended permit icmp any any
-      access-list GUEST_IN extended permit udp 10.10.40.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list GUEST_IN extended permit udp any eq bootpc host 255.255.255.255 eq bootps
-      access-list GUEST_IN extended permit udp 10.10.40.0 255.255.255.0 eq bootpc host 10.10.40.1 eq bootps
-      access-list GUEST_IN extended deny ip 10.10.40.0 255.255.255.0 object-group BLOCKED-DEST log interval 1
-      access-list GUEST_IN extended permit udp 10.10.40.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0 any eq www
-      access-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0 any eq https
-      access-list GUEST_IN extended deny ip any any log interval 1
-      access-list MGMT_IN extended permit icmp any any
-      access-list MGMT_IN extended permit udp 10.10.99.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 any eq www
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 any eq https
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq ssh
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 198.51.100.6 eq ssh
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 203.0.113.1 eq ssh
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 203.0.113.5 eq ssh
-      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 198.51.100.9 eq ssh
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 10.0.0.0 255.0.0.0
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 host 198.51.100.6
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 host 203.0.113.1
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 host 203.0.113.5
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 host 198.51.100.9
-      access-list MGMT_IN extended permit tcp host 10.10.99.10 host 10.20.30.10 eq 8080
-      access-list MGMT_IN extended deny ip host 10.10.99.10 object-group BLOCKED-DEST log interval 1
-      access-list MGMT_IN extended permit udp host 10.10.99.10 host 1.1.1.1 eq domain
-      access-list MGMT_IN extended permit tcp host 10.10.99.10 host 1.1.1.1 eq domain
-      access-list MGMT_IN extended permit tcp host 10.10.99.10 any eq www
-      access-list MGMT_IN extended permit tcp host 10.10.99.10 any eq https
-      access-list MGMT_IN extended permit udp host 10.10.99.10 any eq ntp
-      access-list MGMT_IN extended permit icmp host 10.10.99.10 any
-      access-list MGMT_IN extended deny ip any any log interval 1
-      access-list OUTSIDE_IN extended permit icmp any any
-      access-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0 10.10.0.0 255.255.0.0 eq www
-      access-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0 10.10.0.0 255.255.0.0 eq https
-      access-list OUTSIDE_IN extended permit udp 10.20.10.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp host 10.20.30.10 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp 10.20.99.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0 10.10.0.0 255.255.0.0 eq ssh
-      access-list OUTSIDE_IN extended permit tcp host 198.51.100.10 host 10.10.99.10 eq ssh
-      access-list OUTSIDE_IN extended permit udp host 10.10.255.1 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp host 10.10.255.1 host 10.10.99.10 eq syslog
-      access-list OUTSIDE_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.10.99.10 eq 8080
-      access-list OUTSIDE_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.10.99.10
-      access-list OUTSIDE_IN extended permit tcp host 10.20.30.10 host 10.10.99.10 eq 8080
-      access-list OUTSIDE_IN extended permit icmp host 10.20.30.10 host 10.10.99.10
-      access-list OUTSIDE_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq syslog
-      access-list OUTSIDE_IN extended permit udp host 10.20.255.1 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp host 10.20.255.1 host 10.10.99.10 eq syslog
-      access-list OUTSIDE_IN extended permit udp host 198.51.100.6 host 10.10.99.10 eq ntp
-      access-list OUTSIDE_IN extended permit udp host 198.51.100.6 host 10.10.99.10 eq syslog
-      access-list OUTSIDE_IN extended deny ip any any log interval 1
-      pager lines 23
-      mtu OUTSIDE 1500
-      mtu CLIN 1500
-      mtu ADMIN 1500
-      mtu GUEST 1500
-      mtu MGMT 1500
-      no failover
-      no failover wait-disable
-      no monitor-interface CLIN
-      no monitor-interface ADMIN
-      no monitor-interface GUEST
-      no monitor-interface MGMT
-      no monitor-interface service-module
-      icmp permit any OUTSIDE
-      icmp permit any CLIN
-      icmp permit any ADMIN
-      icmp permit any GUEST
-      icmp permit any MGMT
-      icmp unreachable rate-limit 1 burst-size 1
-      no asdm history enable
-      arp timeout 14400
-      no arp permit-nonconnected
-      arp rate-limit 8192
-      logging enable
-      logging timestamp
-      logging buffered informational
-      logging trap informational
-      logging device-id hostname
-      logging host MGMT 10.10.99.10
-      route OUTSIDE 0.0.0.0 0.0.0.0 198.51.100.1 1
-      timeout xlate 3:00:00
-      timeout pat-xlate 0:00:30
-      timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
-      timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
-      timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
-      timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
-      timeout tcp-proxy-reassembly 0:01:00
-      timeout floating-conn 0:00:00
-      timeout conn-holddown 0:00:15
-      timeout igp stale-route 0:01:10
-      user-identity default-domain LOCAL
-      aaa authentication ssh console LOCAL
-      aaa authentication serial console LOCAL
-      aaa authentication login-history
-      no snmp-server location
-      no snmp-server contact
-      no sysopt connection permit-vpn
-      crypto ipsec security-association pmtu-aging infinite
-      crypto ca trustpoint _SmartCallHome_ServerCA
-       no validation-usage
-       crl configure
-      crypto ca trustpoint _SmartCallHome_ServerCA2
-       no validation-usage
-       crl configure
-      crypto ca trustpool policy
-       auto-import
-      crypto ca certificate chain _SmartCallHome_ServerCA
-       certificate ca 0a0142800000014523c844b500000002
-          30820560 30820348 a0030201 0202100a 01428000 00014523 c844b500 00000230
-          0d06092a 864886f7 0d01010b 0500304a 310b3009 06035504 06130255 53311230
-          10060355 040a1309 4964656e 54727573 74312730 25060355 0403131e 4964656e
-          54727573 7420436f 6d6d6572 6369616c 20526f6f 74204341 2031301e 170d3134
-          30313136 31383132 32335a17 0d333430 31313631 38313232 335a304a 310b3009
-          06035504 06130255 53311230 10060355 040a1309 4964656e 54727573 74312730
-          25060355 0403131e 4964656e 54727573 7420436f 6d6d6572 6369616c 20526f6f
-          74204341 20313082 0222300d 06092a86 4886f70d 01010105 00038202 0f003082
-          020a0282 020100a7 5019de3f 993dd433 46f16f51 6182b2a9 4f8f6789 5d84d953
-          dd0c28d9 d7f0ffae 95437299 f9b55d7c 8ac142e1 315074d1 810d7ccd 9b21ab43
-          e2acad5e 866ef309 8a1f5a32 bda2eb94 f9e85c0a ecff98d2 af71b3b4 539f4e87
-          ef92bcbd ec4f3230 884b175e 57c453c2 f602978d d9622bbf 241f628d dfc3b829
-          4b49783c 93608822 fc99da36 c8c2a2d4 2c540067 356e73bf 0258f0a4 dde5b0a2
-          267acae0 36a51916 f5fdb7ef ae3f40f5 6d5a04fd ce34ca24 dc74231b 5d331312
-          5dc40125 f630dd02 5d9fe0d5 47bdb4eb 1ba1bb49 49d89f5b 02f38ae4 2490e462
-          4f4fc1af 8b0e7417 a8d17288 6a7a0149 ccb44679 c617b1da 981e0759 fa752185
-          65dd9056 cefbaba5 609dc49d f952b08b bd87f98f 2b230a23 763bf733 e1c900f3
-          69f94ba2 e04ebc7e 93398407 f744707e fe075ae5 b1acd118 ccf235e5 494908ca
-          56c93dfb 0f187d8b 3bc113c2 4d8fc94f 0e37e91f a10e6adf 622ecb35 0651792c
-          c82538f4 fa4ba789 5c9cd2e3 0d39864a 747cd559 87c23f4e 0c5c52f4 3df75282
-          f1eaa3ac fd49341a 28f34188 3a13eee8 deff991d 5fbacbe8 1ef2b950 60c031d3
-          73e5efbe a0ed330b 74be2020 c4676cf0 08037a55 807f464e 96a7f41e 3ee1f6d8
-          09e13364 2b63d732 5e9ff9c0 7b0f786f 97bc939a f99c1290 787a8087 15d77274
-          9c557478 b1bae16e 7004ba4f a0ba68c3 7bff31f0 733d3d94 2ab10b41 0ea0fe4d
-          88656b79 33b4d702 03010001 a3423040 300e0603 551d0f01 01ff0404 03020106
-          300f0603 551d1301 01ff0405 30030101 ff301d06 03551d0e 04160414 ed4419c0
-          d3f0068b eea47bbe 42e72654 c88e3676 300d0609 2a864886 f70d0101 0b050003
-          82020100 0dae9032 f6a64b7c 44761961 1e2728cd 5e54ef25 bce30890 f929d7ae
-          6808e194 0058ef2e 2e7e5352 8cb65c07 ea88ba99 8b5094d7 8280df61 090093ad
-          0d14e6ce c1f23794 78b05f9c b3a273b8 8f059338 cd8d3eb0 b8fbc0cf b1f2ec2d
-          2d1bccec aa9ab3aa 60821b2d 3bc3843d 578a961e 9c75b8d3 30cd6008 8390d38e
-          54f14d66 c05d7403 40a3ee85 7ec21f77 9c06e8c1 a7185d52 95edc9dd 259e6dfa
-          a9eda33a 34d0597b daed50f3 35bfedeb 144d31c7 60f4daf1 879ce248 e2c6c537
-          fb0610fa 75596631 4729da76 9a1ce982 aeef9ab9 51f78823 9a699562 3ce55580
-          36d75402 fff1b95d ced4236f d845844a 5b65ef89 0cdd14a7 20cb18a5 25b40df9
-          01f0a2d2 f400c874 8ea12a48 8e65db13 c4e22517 7debbe87 5b172054 51934a53
-          030bec5d ca33ed62 fd45c72f 5bdc58a0 8039e6fa d7fe1314 a6ed3d94 4a4274d4
-          c3775973 cd8f46be 5538effa e89132ea 97580422 de38c3cc bc6dc933 3a6a0a69
-          3fa0c8ea 728f8c63 8623bd6d 3c969e95 e0494caa a2b92a1b 9c368178 edc3e846
-          e2265944 751ed975 8951cd10 849d6160 cb5df997 224d8e98 e6e37ff6 5bbbaecd
-          ca4a816b 5e0bf351 e1742be9 7e27a7d9 99494ef8 a580db25 0f1c6362 8ac93367
-          6b3c1083 c6addea8 cd168e8d f0073771 9ff2abfc 41f5c18b ec00375d 09e54e80
-          effab15c 3806a51b 4ae1dc38 2d3cdcab 1f901ad5 4a9ceed1 706cccee f457f818
-          ba846e87
-        quit
-      crypto ca certificate chain _SmartCallHome_ServerCA2
-       certificate ca 0509
-          308205b7 3082039f a0030201 02020205 09300d06 092a8648 86f70d01 01050500
-          3045310b 30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164
-          6973204c 696d6974 6564311b 30190603 55040313 1251756f 56616469 7320526f
-          6f742043 41203230 1e170d30 36313132 34313832 3730305a 170d3331 31313234
-          31383233 33335a30 45310b30 09060355 04061302 424d3119 30170603 55040a13
-          1051756f 56616469 73204c69 6d697465 64311b30 19060355 04031312 51756f56
-          61646973 20526f6f 74204341 20323082 0222300d 06092a86 4886f70d 01010105
-          00038202 0f003082 020a0282 0201009a 18ca4b94 0d002daf 03298af0 0f81c8ae
-          4c19851d 089fab29 4485f32f 81ad321e 9046bfa3 86261a1e fe7e1c18 3a5c9c60
-          172a3a74 8333307d 615411cb edabe0e6 d2a27ef5 6b6f18b7 0a0b2dfd e93eef0a
-          c6b310e9 dcc24617 f85dfda4 daff9e49 5a9ce633 e62496f7 3fba5b2b 1c7a35c2
-          d667feab 66508b6d 28602bef d760c3c7 93bc8d36 91f37ff8 db1113c4 9c7776c1
-          aeb7026a 817aa945 83e205e6 b956c194 378f4871 6322ec17 6507958a 4bdf8fc6
-          5a0ae5b0 e35f5e6b 11ab0cf9 85eb44e9 f80473f2 e9fe5c98 8cf573af 6bb47ecd
-          d45c022b 4c39e1b2 95952d42 87d7d5b3 9043b76c 13f1dedd f6c4f889 3fd175f5
-          92c391d5 8a88d090 ecdc6dde 89c26571 968b0d03 fd9cbf5b 16ac92db eafe797c
-          adebaff7 16cbdbcd 252be51f fb9a9fe2 51cc3a53 0c48e60e bdc9b476 0652e611
-          13857263 0304e004 362b2019 02e874a7 1fb6c956 66f07525 dc67c10e 616088b3
-          3ed1a8fc a3da1db0 d1b12354 df44766d ed41d8c1 b222b653 1cdf351d dca1772a
-          31e42df5 e5e5dbc8 e0ffe580 d70b63a0 ff33a10f ba2c1515 ea97b3d2 a2b5bef2
-          8c961e1a 8f1d6ca4 6137b986 7333d797 969e237d 82a44c81 e2a1d1ba 675f9507
-          a32711ee 16107bbc 454a4cb2 04d2abef d5fd0c51 ce506a08 31f991da 0c8f645c
-          03c33a8b 203f6e8d 673d3ad6 fe7d5b88 c95efbcc 61dc8b33 77d34432 35096204
-          921610d8 9e2747fb 3b21e3f8 eb1d5b02 03010001 a381b030 81ad300f 0603551d
-          130101ff 04053003 0101ff30 0b060355 1d0f0404 03020106 301d0603 551d0e04
-          1604141a 8462bc48 4c332504 d4eed0f6 03c41946 d1946b30 6e060355 1d230467
-          30658014 1a8462bc 484c3325 04d4eed0 f603c419 46d1946b a149a447 3045310b
-          30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164 6973204c
-          696d6974 6564311b 30190603 55040313 1251756f 56616469 7320526f 6f742043
-          41203282 02050930 0d06092a 864886f7 0d010105 05000382 0201003e 0a164d9f
-          065ba8ae 715d2f05 2f67e613 4583c436 f6f3c026 0c0db547 645df8b4 72c946a5
-          03182755 89787d76 ea963480 1720dce7 83f88dfc 07b8da5f 4d2e67b2 84fdd944
-          fc775081 e67cb4c9 0d0b7253 f8760707 4147960c fbe08226 93558cfe 221f6065
-          7c5fe726 b3f73290 9850d437 7155f692 2178f795 79faf82d 26876656 3077a637
-          78335210 58ae3f61 8ef26ab1 ef187e4a 5963ca8d a256d5a7 2fbc561f cf39c1e2
-          fb0aa815 2c7d4d7a 63c66c97 443cd26f c34a170a f890d257 a21951a5 2d9741da
-          074fa950 da908d94 46e13ef0 94fd1000 38f53be8 40e1b46e 561a20cc 6f588ded
-          2e458fd6 e9933fe7 b12cdf3a d6228cdc 84bb226f d0f8e4c6 39e90488 3cc3baeb
-          557a6d80 9924f56c 01fbf897 b0945beb fdd26ff1 77680d35 6423acb8 55a103d1
-          4d4219dc f8755956 a3f9a849 79f8af0e b911a07c b76aed34 d0b62662 381a870c
-          f8e8fd2e d3907f07 912a1dd6 7e5c8583 99b03808 3fe95ef9 3507e4c9 626e577f
-          a75095f7 bac89be6 8ea201c5 d666bf79 61f33c1c e1b9825c 5da0c3e9 d848bd19
-          a2111419 6eb2861b 683e4837 1a88b75d 965e9cc7 ef276208 e291195c d2f121dd
-          ba174282 97718153 31a99ff6 7d62bf72 e1a3931d cc8a265a 0938d0ce d70d8016
-          b478a53a 874c8d8a a5d54697 f22c10b9 bc5422c0 01506943 9ef4b2ef 6df8ecda
-          f1e3b1ef df918f54 2a0b25c1 2619c452 100565d5 8210eac2 31cd2e
-        quit
-      telnet timeout 10
-      ssh stricthostkeycheck
-      ssh timeout 15
-      ssh key-exchange group dh-group14-sha256
-      ssh 10.20.99.0 255.255.255.0 OUTSIDE
-      ssh 10.10.99.0 255.255.255.0 MGMT
-      console timeout 0
-      console serial
-      dhcpd dns 1.1.1.1 1.0.0.1
-      !
-      dhcpd address 10.10.10.100-10.10.10.149 CLIN
-      dhcpd enable CLIN
-      !
-      dhcpd address 10.10.20.100-10.10.20.149 ADMIN
-      dhcpd enable ADMIN
-      !
-      dhcpd address 10.10.40.100-10.10.40.149 GUEST
-      dhcpd enable GUEST
-      !
-      threat-detection basic-threat
-      threat-detection statistics access-list
-      no threat-detection statistics tcp-intercept
-      ntp server 10.10.99.10 source MGMT prefer
-      dynamic-access-policy-record DfltAccessPolicy
-      !
-      class-map inspection_default
-       match default-inspection-traffic
-      !
-      !
-      policy-map type inspect dns preset_dns_map
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      policy-map global_policy
-       class inspection_default
-        inspect ip-options
-        inspect netbios
-        inspect rtsp
-        inspect sunrpc
-        inspect tftp
-        inspect dns preset_dns_map
-        inspect ftp
-        inspect h323 h225
-        inspect h323 ras
-        inspect rsh
-        inspect esmtp
-        inspect sqlnet
-        inspect sip
-        inspect skinny
-        inspect icmp
-      policy-map type inspect dns migrated_dns_map_2
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      policy-map type inspect dns migrated_dns_map_1
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      !
-      service-policy global_policy global
-      prompt hostname context
-      no call-home reporting anonymous
-      call-home
-       profile License
-        destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
-        destination transport-method http
-       profile CiscoTAC-1
-        no active
-        destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
-        destination address email callhome@cisco.com
-        destination transport-method http
-        subscribe-to-alert-group diagnostic
-        subscribe-to-alert-group environment
-        subscribe-to-alert-group inventory periodic monthly
-        subscribe-to-alert-group configuration periodic monthly
-        subscribe-to-alert-group telemetry periodic daily
-      : end
+    content: ": Saved\n\n:\n: Serial Number: 9AL9N432BNL\n: Hardware:   ASAv, 2048 MB RAM, CPU Xeon 5500 series 2000 MHz\n\
+      :\nASA Version 9.23(1)\n!\nhostname TAC-FW1\ndomain-name hphs.lab\nenable password cisco12!@\nusername cisco password\
+      \ cisco12!@ privilege 15\nservice-module 0 keepalive-timeout 4\nservice-module 0 keepalive-counter 6\nnames\nno mac-address\
+      \ auto\n\n!\ninterface GigabitEthernet0/0\n description TAC-R1 border transit\n nameif OUTSIDE\n security-level 0\n\
+      \ ip address 198.51.100.2 255.255.255.252\n!\ninterface GigabitEthernet0/1\n description 802.1Q trunk to TAC-SW1\n no\
+      \ nameif\n no security-level\n no ip address\n!\ninterface GigabitEthernet0/1.10\n vlan 10\n nameif CLIN\n security-level\
+      \ 60\n ip address 10.10.10.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.20\n vlan 20\n nameif ADMIN\n security-level\
+      \ 70\n ip address 10.10.20.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.40\n vlan 40\n nameif GUEST\n security-level\
+      \ 10\n ip address 10.10.40.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.50\n vlan 50\n nameif SERVER\n security-level\
+      \ 80\n ip address 10.10.50.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.99\n vlan 99\n nameif MGMT\n security-level\
+      \ 100\n ip address 10.10.99.1 255.255.255.0\n!\ninterface Management0/0\n no management-only\n shutdown\n no nameif\n\
+      \ no security-level\n no ip address\n!\nbanner login This is a private computer network operated by Harbor Point Health\
+      \ Services. Access to\nbanner login this network, its infrastructure, and all connected electronic systems is restricted\n\
+      banner login solely to authorized individuals for legitimate business purposes.\nbanner login  \nbanner login Unauthorized\
+      \ login, access, or use of this resource is strictly prohibited. It is\nbanner login subject to civil, criminal, and\
+      \ administrative penalties.\nbanner login  \nbanner login By attempting to log in, you explicitly acknowledge and agree\
+      \ that:\nbanner login  \nbanner login * You are an authorized user acting within your permitted scope.\nbanner login\
+      \  \nbanner login * You have no expectation of privacy regarding any activity on this network.\nbanner login  \nbanner\
+      \ login * All activities, communications, and data may be monitored, intercepted, recorded,\nbanner login read, or copied\
+      \ by authorized personnel.\nbanner login  \nbanner login * Evidence of unauthorized use or illegal activity will be\
+      \ disclosed to corporate\nbanner login management and law enforcement officials.\nbanner login  \nbanner login If you\
+      \ are not an authorized user of this system, DISCONNECT IMMEDIATELY.\nftp mode passive\ndns server-group DefaultDNS\n\
+      \ domain-name hphs.lab\nsame-security-traffic permit inter-interface\nsame-security-traffic permit intra-interface\n\
+      no object-group-search access-control\nobject-group network PUBLIC-DNS\n network-object host 1.1.1.1\n network-object\
+      \ host 1.0.0.1\nobject-group network GUEST-BLOCKED-DEST\n network-object 10.0.0.0 255.0.0.0\n network-object 172.16.0.0\
+      \ 255.240.0.0\n network-object 192.168.0.0 255.255.0.0\n network-object 198.51.100.0 255.255.255.0\n network-object\
+      \ 203.0.113.0 255.255.255.0\nobject-group network BLOCKED-DEST\n network-object 10.0.0.0 255.0.0.0\n network-object\
+      \ 172.16.0.0 255.240.0.0\n network-object 192.168.0.0 255.255.0.0\n network-object 198.51.100.0 255.255.255.248\naccess-group\
+      \ OUTSIDE_IN in interface OUTSIDE\naccess-group CLIN_IN in interface CLIN\naccess-group ADMIN_IN in interface ADMIN\n\
+      access-group GUEST_IN in interface GUEST\naccess-group MGMT_IN in interface MGMT\naccess-group SERVER_IN in interface\
+      \ SERVER\naccess-list CLIN_IN extended permit icmp any any\naccess-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0\
+      \ object-group PUBLIC-DNS eq domain\naccess-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 object-group PUBLIC-DNS\
+      \ eq domain\naccess-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 host 10.10.50.10 eq ntp\naccess-list CLIN_IN\
+      \ extended permit udp any eq bootpc host 255.255.255.255 eq bootps\naccess-list CLIN_IN extended permit udp 10.10.10.0\
+      \ 255.255.255.0 eq bootpc host 10.10.10.1 eq bootps\naccess-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0\
+      \ host 10.10.50.10 eq 8080\naccess-list CLIN_IN extended permit icmp 10.10.10.0 255.255.255.0 host 10.10.50.10\naccess-list\
+      \ CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 host 10.20.30.10 eq 8080\naccess-list CLIN_IN extended permit\
+      \ icmp 10.10.10.0 255.255.255.0 host 10.20.30.10\naccess-list CLIN_IN extended deny ip 10.10.10.0 255.255.255.0 object-group\
+      \ BLOCKED-DEST log interval 1\naccess-list CLIN_IN extended permit udp 10.10.10.0 255.255.255.0 host 1.1.1.1 eq domain\n\
+      access-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 host 1.1.1.1 eq domain\naccess-list CLIN_IN extended\
+      \ permit tcp 10.10.10.0 255.255.255.0 any eq www\naccess-list CLIN_IN extended permit tcp 10.10.10.0 255.255.255.0 any\
+      \ eq https\naccess-list CLIN_IN extended deny ip any any log interval 1\naccess-list ADMIN_IN extended permit icmp any\
+      \ any\naccess-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 object-group PUBLIC-DNS eq domain\naccess-list\
+      \ ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 object-group PUBLIC-DNS eq domain\naccess-list ADMIN_IN extended\
+      \ permit udp 10.10.20.0 255.255.255.0 host 10.10.50.10 eq ntp\naccess-list ADMIN_IN extended permit udp any eq bootpc\
+      \ host 255.255.255.255 eq bootps\naccess-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0 eq bootpc host 10.10.20.1\
+      \ eq bootps\naccess-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 host 10.10.50.10 eq 8081\naccess-list\
+      \ ADMIN_IN extended permit icmp 10.10.20.0 255.255.255.0 host 10.10.50.10\naccess-list ADMIN_IN extended deny ip 10.10.20.0\
+      \ 255.255.255.0 object-group BLOCKED-DEST log interval 1\naccess-list ADMIN_IN extended permit udp 10.10.20.0 255.255.255.0\
+      \ host 1.1.1.1 eq domain\naccess-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 host 1.1.1.1 eq domain\n\
+      access-list ADMIN_IN extended permit tcp 10.10.20.0 255.255.255.0 any eq www\naccess-list ADMIN_IN extended permit tcp\
+      \ 10.10.20.0 255.255.255.0 any eq https\naccess-list ADMIN_IN extended deny ip any any log interval 1\naccess-list GUEST_IN\
+      \ extended permit udp any eq bootpc host 255.255.255.255 eq bootps\naccess-list GUEST_IN extended permit udp 10.10.40.0\
+      \ 255.255.255.0 eq bootpc host 10.10.40.1 eq bootps\naccess-list GUEST_IN extended deny ip any object-group GUEST-BLOCKED-DEST\
+      \ log interval 1\naccess-list GUEST_IN extended permit udp 10.10.40.0 255.255.255.0 object-group PUBLIC-DNS eq domain\n\
+      access-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0 object-group PUBLIC-DNS eq domain\naccess-list GUEST_IN\
+      \ extended permit tcp 10.10.40.0 255.255.255.0 any eq www\naccess-list GUEST_IN extended permit tcp 10.10.40.0 255.255.255.0\
+      \ any eq https\naccess-list GUEST_IN extended deny ip any any log interval 1\naccess-list MGMT_IN extended permit icmp\
+      \ any any\naccess-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq www\naccess-list MGMT_IN\
+      \ extended permit tcp 10.10.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq https\naccess-list MGMT_IN extended permit tcp\
+      \ 10.10.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq ssh\naccess-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0\
+      \ host 198.51.100.6 eq ssh\naccess-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 203.0.113.1 eq ssh\n\
+      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 203.0.113.5 eq ssh\naccess-list MGMT_IN extended\
+      \ permit tcp 10.10.99.0 255.255.255.0 host 198.51.100.9 eq ssh\naccess-list MGMT_IN extended permit udp 10.10.99.0 255.255.255.0\
+      \ host 10.10.50.10 eq ntp\naccess-list MGMT_IN extended permit udp 10.10.99.0 255.255.255.0 host 10.10.50.10 eq syslog\n\
+      access-list MGMT_IN extended permit tcp 10.10.99.0 255.255.255.0 host 10.10.50.10 eq 8080\naccess-list MGMT_IN extended\
+      \ permit tcp 10.10.99.0 255.255.255.0 host 10.10.50.10 eq 8081\naccess-list MGMT_IN extended deny ip any any log interval\
+      \ 1\naccess-list SERVER_IN extended permit icmp host 10.10.50.10 any\naccess-list SERVER_IN extended permit tcp host\
+      \ 10.10.50.10 host 10.20.30.10 eq 8080\naccess-list SERVER_IN extended deny ip any object-group BLOCKED-DEST log interval\
+      \ 1\naccess-list SERVER_IN extended permit udp host 10.10.50.10 object-group PUBLIC-DNS eq domain\naccess-list SERVER_IN\
+      \ extended permit tcp host 10.10.50.10 object-group PUBLIC-DNS eq domain\naccess-list SERVER_IN extended permit tcp\
+      \ host 10.10.50.10 any eq www\naccess-list SERVER_IN extended permit tcp host 10.10.50.10 any eq https\naccess-list\
+      \ SERVER_IN extended permit udp host 10.10.50.10 any eq ntp\naccess-list SERVER_IN extended deny ip any any log interval\
+      \ 1\naccess-list OUTSIDE_IN extended permit icmp any any\naccess-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0\
+      \ 10.10.0.0 255.255.0.0 eq www\naccess-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0 10.10.0.0 255.255.0.0\
+      \ eq https\naccess-list OUTSIDE_IN extended permit udp 10.20.10.0 255.255.255.0 host 10.10.50.10 eq ntp\naccess-list\
+      \ OUTSIDE_IN extended permit udp host 10.20.30.10 host 10.10.50.10 eq ntp\naccess-list OUTSIDE_IN extended permit udp\
+      \ 10.20.99.0 255.255.255.0 host 10.10.50.10 eq ntp\naccess-list OUTSIDE_IN extended permit tcp 10.20.99.0 255.255.255.0\
+      \ 10.10.0.0 255.255.0.0 eq ssh\naccess-list OUTSIDE_IN extended permit tcp host 198.51.100.10 host 10.10.50.10 eq ssh\n\
+      access-list OUTSIDE_IN extended permit udp host 10.10.255.1 host 10.10.50.10 eq ntp\naccess-list OUTSIDE_IN extended\
+      \ permit udp host 10.10.255.1 host 10.10.50.10 eq syslog\naccess-list OUTSIDE_IN extended permit tcp 10.20.10.0 255.255.255.0\
+      \ host 10.10.50.10 eq 8080\naccess-list OUTSIDE_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.10.50.10\n\
+      access-list OUTSIDE_IN extended permit tcp host 10.20.30.10 host 10.10.50.10 eq 8080\naccess-list OUTSIDE_IN extended\
+      \ permit icmp host 10.20.30.10 host 10.10.50.10\naccess-list OUTSIDE_IN extended permit udp host 10.20.99.11 host 10.10.50.10\
+      \ eq ntp\naccess-list OUTSIDE_IN extended permit udp host 10.20.99.11 host 10.10.50.10 eq syslog\naccess-list OUTSIDE_IN\
+      \ extended permit udp host 10.20.255.1 host 10.10.50.10 eq ntp\naccess-list OUTSIDE_IN extended permit udp host 10.20.255.1\
+      \ host 10.10.50.10 eq syslog\naccess-list OUTSIDE_IN extended permit udp host 198.51.100.6 host 10.10.50.10 eq ntp\n\
+      access-list OUTSIDE_IN extended permit udp host 198.51.100.6 host 10.10.50.10 eq syslog\naccess-list OUTSIDE_IN extended\
+      \ deny ip any any log interval 1\npager lines 23\nmtu OUTSIDE 1500\nmtu CLIN 1500\nmtu ADMIN 1500\nmtu GUEST 1500\n\
+      mtu MGMT 1500\nmtu SERVER 1500\nno failover\nno failover wait-disable\nno monitor-interface CLIN\nno monitor-interface\
+      \ ADMIN\nno monitor-interface GUEST\nno monitor-interface MGMT\nno monitor-interface SERVER\nno monitor-interface service-module\n\
+      icmp permit any OUTSIDE\nicmp permit any CLIN\nicmp permit any ADMIN\nicmp deny any GUEST\nicmp permit any MGMT\nicmp\
+      \ permit any SERVER\nicmp unreachable rate-limit 1 burst-size 1\nno asdm history enable\narp timeout 14400\nno arp permit-nonconnected\n\
+      arp rate-limit 8192\nlogging enable\nlogging timestamp\nlogging buffered informational\nlogging trap informational\n\
+      logging device-id hostname\nlogging host SERVER 10.10.50.10\nroute OUTSIDE 0.0.0.0 0.0.0.0 198.51.100.1 1\ntimeout xlate\
+      \ 3:00:00\ntimeout pat-xlate 0:00:30\ntimeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02\n\
+      timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00\ntimeout sip 0:30:00 sip_media 0:02:00\
+      \ sip-invite 0:03:00 sip-disconnect 0:02:00\ntimeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute\ntimeout tcp-proxy-reassembly\
+      \ 0:01:00\ntimeout floating-conn 0:00:00\ntimeout conn-holddown 0:00:15\ntimeout igp stale-route 0:01:10\nuser-identity\
+      \ default-domain LOCAL\naaa authentication ssh console LOCAL\naaa authentication serial console LOCAL\naaa authentication\
+      \ login-history\nno snmp-server location\nno snmp-server contact\nno sysopt connection permit-vpn\ncrypto ipsec security-association\
+      \ pmtu-aging infinite\ncrypto ca trustpoint _SmartCallHome_ServerCA\n no validation-usage\n crl configure\ncrypto ca\
+      \ trustpoint _SmartCallHome_ServerCA2\n no validation-usage\n crl configure\ncrypto ca trustpool policy\n auto-import\n\
+      crypto ca certificate chain _SmartCallHome_ServerCA\n certificate ca 0a0142800000014523c844b500000002\n    30820560\
+      \ 30820348 a0030201 0202100a 01428000 00014523 c844b500 00000230\n    0d06092a 864886f7 0d01010b 0500304a 310b3009 06035504\
+      \ 06130255 53311230\n    10060355 040a1309 4964656e 54727573 74312730 25060355 0403131e 4964656e\n    54727573 7420436f\
+      \ 6d6d6572 6369616c 20526f6f 74204341 2031301e 170d3134\n    30313136 31383132 32335a17 0d333430 31313631 38313232 335a304a\
+      \ 310b3009\n    06035504 06130255 53311230 10060355 040a1309 4964656e 54727573 74312730\n    25060355 0403131e 4964656e\
+      \ 54727573 7420436f 6d6d6572 6369616c 20526f6f\n    74204341 20313082 0222300d 06092a86 4886f70d 01010105 00038202 0f003082\n\
+      \    020a0282 020100a7 5019de3f 993dd433 46f16f51 6182b2a9 4f8f6789 5d84d953\n    dd0c28d9 d7f0ffae 95437299 f9b55d7c\
+      \ 8ac142e1 315074d1 810d7ccd 9b21ab43\n    e2acad5e 866ef309 8a1f5a32 bda2eb94 f9e85c0a ecff98d2 af71b3b4 539f4e87\n\
+      \    ef92bcbd ec4f3230 884b175e 57c453c2 f602978d d9622bbf 241f628d dfc3b829\n    4b49783c 93608822 fc99da36 c8c2a2d4\
+      \ 2c540067 356e73bf 0258f0a4 dde5b0a2\n    267acae0 36a51916 f5fdb7ef ae3f40f5 6d5a04fd ce34ca24 dc74231b 5d331312\n\
+      \    5dc40125 f630dd02 5d9fe0d5 47bdb4eb 1ba1bb49 49d89f5b 02f38ae4 2490e462\n    4f4fc1af 8b0e7417 a8d17288 6a7a0149\
+      \ ccb44679 c617b1da 981e0759 fa752185\n    65dd9056 cefbaba5 609dc49d f952b08b bd87f98f 2b230a23 763bf733 e1c900f3\n\
+      \    69f94ba2 e04ebc7e 93398407 f744707e fe075ae5 b1acd118 ccf235e5 494908ca\n    56c93dfb 0f187d8b 3bc113c2 4d8fc94f\
+      \ 0e37e91f a10e6adf 622ecb35 0651792c\n    c82538f4 fa4ba789 5c9cd2e3 0d39864a 747cd559 87c23f4e 0c5c52f4 3df75282\n\
+      \    f1eaa3ac fd49341a 28f34188 3a13eee8 deff991d 5fbacbe8 1ef2b950 60c031d3\n    73e5efbe a0ed330b 74be2020 c4676cf0\
+      \ 08037a55 807f464e 96a7f41e 3ee1f6d8\n    09e13364 2b63d732 5e9ff9c0 7b0f786f 97bc939a f99c1290 787a8087 15d77274\n\
+      \    9c557478 b1bae16e 7004ba4f a0ba68c3 7bff31f0 733d3d94 2ab10b41 0ea0fe4d\n    88656b79 33b4d702 03010001 a3423040\
+      \ 300e0603 551d0f01 01ff0404 03020106\n    300f0603 551d1301 01ff0405 30030101 ff301d06 03551d0e 04160414 ed4419c0\n\
+      \    d3f0068b eea47bbe 42e72654 c88e3676 300d0609 2a864886 f70d0101 0b050003\n    82020100 0dae9032 f6a64b7c 44761961\
+      \ 1e2728cd 5e54ef25 bce30890 f929d7ae\n    6808e194 0058ef2e 2e7e5352 8cb65c07 ea88ba99 8b5094d7 8280df61 090093ad\n\
+      \    0d14e6ce c1f23794 78b05f9c b3a273b8 8f059338 cd8d3eb0 b8fbc0cf b1f2ec2d\n    2d1bccec aa9ab3aa 60821b2d 3bc3843d\
+      \ 578a961e 9c75b8d3 30cd6008 8390d38e\n    54f14d66 c05d7403 40a3ee85 7ec21f77 9c06e8c1 a7185d52 95edc9dd 259e6dfa\n\
+      \    a9eda33a 34d0597b daed50f3 35bfedeb 144d31c7 60f4daf1 879ce248 e2c6c537\n    fb0610fa 75596631 4729da76 9a1ce982\
+      \ aeef9ab9 51f78823 9a699562 3ce55580\n    36d75402 fff1b95d ced4236f d845844a 5b65ef89 0cdd14a7 20cb18a5 25b40df9\n\
+      \    01f0a2d2 f400c874 8ea12a48 8e65db13 c4e22517 7debbe87 5b172054 51934a53\n    030bec5d ca33ed62 fd45c72f 5bdc58a0\
+      \ 8039e6fa d7fe1314 a6ed3d94 4a4274d4\n    c3775973 cd8f46be 5538effa e89132ea 97580422 de38c3cc bc6dc933 3a6a0a69\n\
+      \    3fa0c8ea 728f8c63 8623bd6d 3c969e95 e0494caa a2b92a1b 9c368178 edc3e846\n    e2265944 751ed975 8951cd10 849d6160\
+      \ cb5df997 224d8e98 e6e37ff6 5bbbaecd\n    ca4a816b 5e0bf351 e1742be9 7e27a7d9 99494ef8 a580db25 0f1c6362 8ac93367\n\
+      \    6b3c1083 c6addea8 cd168e8d f0073771 9ff2abfc 41f5c18b ec00375d 09e54e80\n    effab15c 3806a51b 4ae1dc38 2d3cdcab\
+      \ 1f901ad5 4a9ceed1 706cccee f457f818\n    ba846e87\n  quit\ncrypto ca certificate chain _SmartCallHome_ServerCA2\n\
+      \ certificate ca 0509\n    308205b7 3082039f a0030201 02020205 09300d06 092a8648 86f70d01 01050500\n    3045310b 30090603\
+      \ 55040613 02424d31 19301706 0355040a 13105175 6f566164\n    6973204c 696d6974 6564311b 30190603 55040313 1251756f 56616469\
+      \ 7320526f\n    6f742043 41203230 1e170d30 36313132 34313832 3730305a 170d3331 31313234\n    31383233 33335a30 45310b30\
+      \ 09060355 04061302 424d3119 30170603 55040a13\n    1051756f 56616469 73204c69 6d697465 64311b30 19060355 04031312 51756f56\n\
+      \    61646973 20526f6f 74204341 20323082 0222300d 06092a86 4886f70d 01010105\n    00038202 0f003082 020a0282 0201009a\
+      \ 18ca4b94 0d002daf 03298af0 0f81c8ae\n    4c19851d 089fab29 4485f32f 81ad321e 9046bfa3 86261a1e fe7e1c18 3a5c9c60\n\
+      \    172a3a74 8333307d 615411cb edabe0e6 d2a27ef5 6b6f18b7 0a0b2dfd e93eef0a\n    c6b310e9 dcc24617 f85dfda4 daff9e49\
+      \ 5a9ce633 e62496f7 3fba5b2b 1c7a35c2\n    d667feab 66508b6d 28602bef d760c3c7 93bc8d36 91f37ff8 db1113c4 9c7776c1\n\
+      \    aeb7026a 817aa945 83e205e6 b956c194 378f4871 6322ec17 6507958a 4bdf8fc6\n    5a0ae5b0 e35f5e6b 11ab0cf9 85eb44e9\
+      \ f80473f2 e9fe5c98 8cf573af 6bb47ecd\n    d45c022b 4c39e1b2 95952d42 87d7d5b3 9043b76c 13f1dedd f6c4f889 3fd175f5\n\
+      \    92c391d5 8a88d090 ecdc6dde 89c26571 968b0d03 fd9cbf5b 16ac92db eafe797c\n    adebaff7 16cbdbcd 252be51f fb9a9fe2\
+      \ 51cc3a53 0c48e60e bdc9b476 0652e611\n    13857263 0304e004 362b2019 02e874a7 1fb6c956 66f07525 dc67c10e 616088b3\n\
+      \    3ed1a8fc a3da1db0 d1b12354 df44766d ed41d8c1 b222b653 1cdf351d dca1772a\n    31e42df5 e5e5dbc8 e0ffe580 d70b63a0\
+      \ ff33a10f ba2c1515 ea97b3d2 a2b5bef2\n    8c961e1a 8f1d6ca4 6137b986 7333d797 969e237d 82a44c81 e2a1d1ba 675f9507\n\
+      \    a32711ee 16107bbc 454a4cb2 04d2abef d5fd0c51 ce506a08 31f991da 0c8f645c\n    03c33a8b 203f6e8d 673d3ad6 fe7d5b88\
+      \ c95efbcc 61dc8b33 77d34432 35096204\n    921610d8 9e2747fb 3b21e3f8 eb1d5b02 03010001 a381b030 81ad300f 0603551d\n\
+      \    130101ff 04053003 0101ff30 0b060355 1d0f0404 03020106 301d0603 551d0e04\n    1604141a 8462bc48 4c332504 d4eed0f6\
+      \ 03c41946 d1946b30 6e060355 1d230467\n    30658014 1a8462bc 484c3325 04d4eed0 f603c419 46d1946b a149a447 3045310b\n\
+      \    30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164 6973204c\n    696d6974 6564311b 30190603 55040313\
+      \ 1251756f 56616469 7320526f 6f742043\n    41203282 02050930 0d06092a 864886f7 0d010105 05000382 0201003e 0a164d9f\n\
+      \    065ba8ae 715d2f05 2f67e613 4583c436 f6f3c026 0c0db547 645df8b4 72c946a5\n    03182755 89787d76 ea963480 1720dce7\
+      \ 83f88dfc 07b8da5f 4d2e67b2 84fdd944\n    fc775081 e67cb4c9 0d0b7253 f8760707 4147960c fbe08226 93558cfe 221f6065\n\
+      \    7c5fe726 b3f73290 9850d437 7155f692 2178f795 79faf82d 26876656 3077a637\n    78335210 58ae3f61 8ef26ab1 ef187e4a\
+      \ 5963ca8d a256d5a7 2fbc561f cf39c1e2\n    fb0aa815 2c7d4d7a 63c66c97 443cd26f c34a170a f890d257 a21951a5 2d9741da\n\
+      \    074fa950 da908d94 46e13ef0 94fd1000 38f53be8 40e1b46e 561a20cc 6f588ded\n    2e458fd6 e9933fe7 b12cdf3a d6228cdc\
+      \ 84bb226f d0f8e4c6 39e90488 3cc3baeb\n    557a6d80 9924f56c 01fbf897 b0945beb fdd26ff1 77680d35 6423acb8 55a103d1\n\
+      \    4d4219dc f8755956 a3f9a849 79f8af0e b911a07c b76aed34 d0b62662 381a870c\n    f8e8fd2e d3907f07 912a1dd6 7e5c8583\
+      \ 99b03808 3fe95ef9 3507e4c9 626e577f\n    a75095f7 bac89be6 8ea201c5 d666bf79 61f33c1c e1b9825c 5da0c3e9 d848bd19\n\
+      \    a2111419 6eb2861b 683e4837 1a88b75d 965e9cc7 ef276208 e291195c d2f121dd\n    ba174282 97718153 31a99ff6 7d62bf72\
+      \ e1a3931d cc8a265a 0938d0ce d70d8016\n    b478a53a 874c8d8a a5d54697 f22c10b9 bc5422c0 01506943 9ef4b2ef 6df8ecda\n\
+      \    f1e3b1ef df918f54 2a0b25c1 2619c452 100565d5 8210eac2 31cd2e\n  quit\ntelnet timeout 10\nssh stricthostkeycheck\n\
+      ssh timeout 15\nssh key-exchange group dh-group14-sha256\nssh 10.20.99.0 255.255.255.0 OUTSIDE\nssh 10.10.99.0 255.255.255.0\
+      \ MGMT\nconsole timeout 0\nconsole serial\ndhcpd dns 1.1.1.1 1.0.0.1\n!\ndhcpd address 10.10.10.100-10.10.10.149 CLIN\n\
+      dhcpd enable CLIN\n!\ndhcpd address 10.10.20.100-10.10.20.149 ADMIN\ndhcpd enable ADMIN\n!\ndhcpd address 10.10.40.100-10.10.40.149\
+      \ GUEST\ndhcpd enable GUEST\n!\nthreat-detection basic-threat\nthreat-detection statistics access-list\nno threat-detection\
+      \ statistics tcp-intercept\nntp server 10.10.50.10 source SERVER prefer\ndynamic-access-policy-record DfltAccessPolicy\n\
+      !\nclass-map inspection_default\n match default-inspection-traffic\n!\n!\npolicy-map type inspect dns preset_dns_map\n\
+      \ parameters\n  message-length maximum client auto\n  message-length maximum 512\n  no tcp-inspection\npolicy-map global_policy\n\
+      \ class inspection_default\n  inspect ip-options\n  inspect netbios\n  inspect rtsp\n  inspect sunrpc\n  inspect tftp\n\
+      \  inspect dns preset_dns_map\n  inspect ftp\n  inspect h323 h225\n  inspect h323 ras\n  inspect rsh\n  inspect esmtp\n\
+      \  inspect sqlnet\n  inspect sip\n  inspect skinny\n  inspect icmp\npolicy-map type inspect dns migrated_dns_map_2\n\
+      \ parameters\n  message-length maximum client auto\n  message-length maximum 512\n  no tcp-inspection\npolicy-map type\
+      \ inspect dns migrated_dns_map_1\n parameters\n  message-length maximum client auto\n  message-length maximum 512\n\
+      \  no tcp-inspection\n!\nservice-policy global_policy global\nprompt hostname context\nno call-home reporting anonymous\n\
+      call-home\n profile License\n  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService\n\
+      \  destination transport-method http\n profile CiscoTAC-1\n  no active\n  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService\n\
+      \  destination address email callhome@cisco.com\n  destination transport-method http\n  subscribe-to-alert-group diagnostic\n\
+      \  subscribe-to-alert-group environment\n  subscribe-to-alert-group inventory periodic monthly\n  subscribe-to-alert-group\
+      \ configuration periodic monthly\n  subscribe-to-alert-group telemetry periodic daily\n: end"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -635,353 +426,158 @@ nodes:
 - boot_disk_size: null
   configuration:
   - name: day0-config
-    content: |-
-      : Saved
-
-      :
-      : Serial Number: 9AFQSWH6LGM
-      : Hardware:   ASAv, 2048 MB RAM, CPU Xeon 5500 series 2000 MHz
-      :
-      ASA Version 9.23(1)
-      !
-      hostname OLY-FW1
-      enable password cisco12!@
-      username cisco password cisco12!@ privilege 15
-      service-module 0 keepalive-timeout 4
-      service-module 0 keepalive-counter 6
-      names
-      no mac-address auto
-
-      !
-      interface GigabitEthernet0/0
-       description OLY-R1 border transit
-       nameif OUTSIDE
-       security-level 0
-       ip address 198.51.100.6 255.255.255.252
-      !
-      interface GigabitEthernet0/1
-       description 802.1Q trunk to OLY-SW1
-       no nameif
-       no security-level
-       no ip address
-      !
-      interface GigabitEthernet0/1.10
-       vlan 10
-       nameif CLIN
-       security-level 60
-       ip address 10.20.10.1 255.255.255.0
-      !
-      interface GigabitEthernet0/1.30
-       vlan 30
-       nameif IMG
-       security-level 50
-       ip address 10.20.30.1 255.255.255.0
-      !
-      interface GigabitEthernet0/1.99
-       vlan 99
-       nameif MGMT
-       security-level 100
-       ip address 10.20.99.1 255.255.255.0
-      !
-      interface Management0/0
-       no management-only
-       shutdown
-       no nameif
-       no security-level
-       no ip address
-      !
-      banner login HPHS authorized lab access only. Activity is monitored. Follow the acceptable use policy.
-      ftp mode passive
-      same-security-traffic permit inter-interface
-      same-security-traffic permit intra-interface
-      no object-group-search access-control
-      object-group network PUBLIC-DNS
-       network-object host 1.1.1.1
-       network-object host 1.0.0.1
-      object-group network BLOCKED-DEST
-       network-object 10.0.0.0 255.0.0.0
-       network-object 172.16.0.0 255.240.0.0
-       network-object 192.168.0.0 255.255.0.0
-       network-object 198.51.100.0 255.255.255.248
-      access-group OUTSIDE_IN in interface OUTSIDE
-      access-group CLIN_IN in interface CLIN
-      access-group IMG_IN in interface IMG
-      access-group MGMT_IN in interface MGMT
-      access-list CLIN_IN extended permit icmp any any
-      access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list CLIN_IN extended permit udp any eq bootpc host 255.255.255.255 eq bootps
-      access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 eq bootpc host 10.20.10.1 eq bootps
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.10.99.10 eq 8080
-      access-list CLIN_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.10.99.10
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.20.30.10 eq 8080
-      access-list CLIN_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.20.30.10
-      access-list CLIN_IN extended deny ip 10.20.10.0 255.255.255.0 object-group BLOCKED-DEST log interval 1
-      access-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq domain
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 any eq www
-      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 any eq https
-      access-list CLIN_IN extended deny ip any any log interval 1
-      access-list IMG_IN extended permit icmp any any
-      access-list IMG_IN extended permit udp host 10.20.30.10 object-group PUBLIC-DNS eq domain
-      access-list IMG_IN extended permit tcp host 10.20.30.10 object-group PUBLIC-DNS eq domain
-      access-list IMG_IN extended permit udp host 10.20.30.10 host 10.10.99.10 eq ntp
-      access-list IMG_IN extended permit tcp host 10.20.30.10 host 10.10.99.10 eq 8080
-      access-list IMG_IN extended permit icmp host 10.20.30.10 host 10.10.99.10
-      access-list IMG_IN extended deny ip host 10.20.30.10 object-group BLOCKED-DEST log interval 1
-      access-list IMG_IN extended permit udp host 10.20.30.10 host 1.1.1.1 eq domain
-      access-list IMG_IN extended permit tcp host 10.20.30.10 host 1.1.1.1 eq domain
-      access-list IMG_IN extended permit tcp host 10.20.30.10 any eq www
-      access-list IMG_IN extended permit tcp host 10.20.30.10 any eq https
-      access-list IMG_IN extended deny ip any any log interval 1
-      access-list MGMT_IN extended permit icmp any any
-      access-list MGMT_IN extended permit udp 10.20.99.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 object-group PUBLIC-DNS eq domain
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 any eq www
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 any eq https
-      access-list MGMT_IN extended permit udp 10.20.99.0 255.255.255.0 host 10.10.99.10 eq ntp
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq ssh
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.2 eq ssh
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 203.0.113.1 eq ssh
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 203.0.113.5 eq ssh
-      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.9 eq ssh
-      access-list MGMT_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq ntp
-      access-list MGMT_IN extended permit udp host 10.20.99.11 host 10.10.99.10 eq syslog
-      access-list MGMT_IN extended deny ip any any log interval 1
-      access-list OUTSIDE_IN extended permit icmp any any
-      access-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq www
-      access-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq https
-      access-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq ssh
-      access-list OUTSIDE_IN extended permit tcp host 198.51.100.10 host 10.20.30.10 eq ssh
-      access-list OUTSIDE_IN extended permit tcp 10.10.10.0 255.255.255.0 host 10.20.30.10 eq 8080
-      access-list OUTSIDE_IN extended permit icmp 10.10.10.0 255.255.255.0 host 10.20.30.10
-      access-list OUTSIDE_IN extended permit icmp host 10.10.99.10 10.20.0.0 255.255.0.0
-      access-list OUTSIDE_IN extended permit tcp host 10.10.99.10 host 10.20.30.10 eq 8080
-      access-list OUTSIDE_IN extended deny ip any any log interval 1
-      pager lines 23
-      mtu OUTSIDE 1500
-      mtu CLIN 1500
-      mtu IMG 1500
-      mtu MGMT 1500
-      no failover
-      no failover wait-disable
-      no monitor-interface CLIN
-      no monitor-interface IMG
-      no monitor-interface MGMT
-      no monitor-interface service-module
-      icmp permit any OUTSIDE
-      icmp permit any CLIN
-      icmp permit any IMG
-      icmp permit any MGMT
-      icmp unreachable rate-limit 1 burst-size 1
-      no asdm history enable
-      arp timeout 14400
-      no arp permit-nonconnected
-      arp rate-limit 8192
-      logging enable
-      logging timestamp
-      logging buffered informational
-      logging trap informational
-      logging device-id hostname
-      logging host OUTSIDE 10.10.99.10
-      route OUTSIDE 0.0.0.0 0.0.0.0 198.51.100.5 1
-      timeout xlate 3:00:00
-      timeout pat-xlate 0:00:30
-      timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
-      timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
-      timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
-      timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
-      timeout tcp-proxy-reassembly 0:01:00
-      timeout floating-conn 0:00:00
-      timeout conn-holddown 0:00:15
-      timeout igp stale-route 0:01:10
-      user-identity default-domain LOCAL
-      aaa authentication ssh console LOCAL
-      aaa authentication serial console LOCAL
-      aaa authentication login-history
-      no snmp-server location
-      no snmp-server contact
-      no sysopt connection permit-vpn
-      crypto ipsec security-association pmtu-aging infinite
-      crypto ca trustpoint _SmartCallHome_ServerCA
-       no validation-usage
-       crl configure
-      crypto ca trustpoint _SmartCallHome_ServerCA2
-       no validation-usage
-       crl configure
-      crypto ca trustpool policy
-       auto-import
-      crypto ca certificate chain _SmartCallHome_ServerCA
-       certificate ca 0a0142800000014523c844b500000002
-          30820560 30820348 a0030201 0202100a 01428000 00014523 c844b500 00000230
-          0d06092a 864886f7 0d01010b 0500304a 310b3009 06035504 06130255 53311230
-          10060355 040a1309 4964656e 54727573 74312730 25060355 0403131e 4964656e
-          54727573 7420436f 6d6d6572 6369616c 20526f6f 74204341 2031301e 170d3134
-          30313136 31383132 32335a17 0d333430 31313631 38313232 335a304a 310b3009
-          06035504 06130255 53311230 10060355 040a1309 4964656e 54727573 74312730
-          25060355 0403131e 4964656e 54727573 7420436f 6d6d6572 6369616c 20526f6f
-          74204341 20313082 0222300d 06092a86 4886f70d 01010105 00038202 0f003082
-          020a0282 020100a7 5019de3f 993dd433 46f16f51 6182b2a9 4f8f6789 5d84d953
-          dd0c28d9 d7f0ffae 95437299 f9b55d7c 8ac142e1 315074d1 810d7ccd 9b21ab43
-          e2acad5e 866ef309 8a1f5a32 bda2eb94 f9e85c0a ecff98d2 af71b3b4 539f4e87
-          ef92bcbd ec4f3230 884b175e 57c453c2 f602978d d9622bbf 241f628d dfc3b829
-          4b49783c 93608822 fc99da36 c8c2a2d4 2c540067 356e73bf 0258f0a4 dde5b0a2
-          267acae0 36a51916 f5fdb7ef ae3f40f5 6d5a04fd ce34ca24 dc74231b 5d331312
-          5dc40125 f630dd02 5d9fe0d5 47bdb4eb 1ba1bb49 49d89f5b 02f38ae4 2490e462
-          4f4fc1af 8b0e7417 a8d17288 6a7a0149 ccb44679 c617b1da 981e0759 fa752185
-          65dd9056 cefbaba5 609dc49d f952b08b bd87f98f 2b230a23 763bf733 e1c900f3
-          69f94ba2 e04ebc7e 93398407 f744707e fe075ae5 b1acd118 ccf235e5 494908ca
-          56c93dfb 0f187d8b 3bc113c2 4d8fc94f 0e37e91f a10e6adf 622ecb35 0651792c
-          c82538f4 fa4ba789 5c9cd2e3 0d39864a 747cd559 87c23f4e 0c5c52f4 3df75282
-          f1eaa3ac fd49341a 28f34188 3a13eee8 deff991d 5fbacbe8 1ef2b950 60c031d3
-          73e5efbe a0ed330b 74be2020 c4676cf0 08037a55 807f464e 96a7f41e 3ee1f6d8
-          09e13364 2b63d732 5e9ff9c0 7b0f786f 97bc939a f99c1290 787a8087 15d77274
-          9c557478 b1bae16e 7004ba4f a0ba68c3 7bff31f0 733d3d94 2ab10b41 0ea0fe4d
-          88656b79 33b4d702 03010001 a3423040 300e0603 551d0f01 01ff0404 03020106
-          300f0603 551d1301 01ff0405 30030101 ff301d06 03551d0e 04160414 ed4419c0
-          d3f0068b eea47bbe 42e72654 c88e3676 300d0609 2a864886 f70d0101 0b050003
-          82020100 0dae9032 f6a64b7c 44761961 1e2728cd 5e54ef25 bce30890 f929d7ae
-          6808e194 0058ef2e 2e7e5352 8cb65c07 ea88ba99 8b5094d7 8280df61 090093ad
-          0d14e6ce c1f23794 78b05f9c b3a273b8 8f059338 cd8d3eb0 b8fbc0cf b1f2ec2d
-          2d1bccec aa9ab3aa 60821b2d 3bc3843d 578a961e 9c75b8d3 30cd6008 8390d38e
-          54f14d66 c05d7403 40a3ee85 7ec21f77 9c06e8c1 a7185d52 95edc9dd 259e6dfa
-          a9eda33a 34d0597b daed50f3 35bfedeb 144d31c7 60f4daf1 879ce248 e2c6c537
-          fb0610fa 75596631 4729da76 9a1ce982 aeef9ab9 51f78823 9a699562 3ce55580
-          36d75402 fff1b95d ced4236f d845844a 5b65ef89 0cdd14a7 20cb18a5 25b40df9
-          01f0a2d2 f400c874 8ea12a48 8e65db13 c4e22517 7debbe87 5b172054 51934a53
-          030bec5d ca33ed62 fd45c72f 5bdc58a0 8039e6fa d7fe1314 a6ed3d94 4a4274d4
-          c3775973 cd8f46be 5538effa e89132ea 97580422 de38c3cc bc6dc933 3a6a0a69
-          3fa0c8ea 728f8c63 8623bd6d 3c969e95 e0494caa a2b92a1b 9c368178 edc3e846
-          e2265944 751ed975 8951cd10 849d6160 cb5df997 224d8e98 e6e37ff6 5bbbaecd
-          ca4a816b 5e0bf351 e1742be9 7e27a7d9 99494ef8 a580db25 0f1c6362 8ac93367
-          6b3c1083 c6addea8 cd168e8d f0073771 9ff2abfc 41f5c18b ec00375d 09e54e80
-          effab15c 3806a51b 4ae1dc38 2d3cdcab 1f901ad5 4a9ceed1 706cccee f457f818
-          ba846e87
-        quit
-      crypto ca certificate chain _SmartCallHome_ServerCA2
-       certificate ca 0509
-          308205b7 3082039f a0030201 02020205 09300d06 092a8648 86f70d01 01050500
-          3045310b 30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164
-          6973204c 696d6974 6564311b 30190603 55040313 1251756f 56616469 7320526f
-          6f742043 41203230 1e170d30 36313132 34313832 3730305a 170d3331 31313234
-          31383233 33335a30 45310b30 09060355 04061302 424d3119 30170603 55040a13
-          1051756f 56616469 73204c69 6d697465 64311b30 19060355 04031312 51756f56
-          61646973 20526f6f 74204341 20323082 0222300d 06092a86 4886f70d 01010105
-          00038202 0f003082 020a0282 0201009a 18ca4b94 0d002daf 03298af0 0f81c8ae
-          4c19851d 089fab29 4485f32f 81ad321e 9046bfa3 86261a1e fe7e1c18 3a5c9c60
-          172a3a74 8333307d 615411cb edabe0e6 d2a27ef5 6b6f18b7 0a0b2dfd e93eef0a
-          c6b310e9 dcc24617 f85dfda4 daff9e49 5a9ce633 e62496f7 3fba5b2b 1c7a35c2
-          d667feab 66508b6d 28602bef d760c3c7 93bc8d36 91f37ff8 db1113c4 9c7776c1
-          aeb7026a 817aa945 83e205e6 b956c194 378f4871 6322ec17 6507958a 4bdf8fc6
-          5a0ae5b0 e35f5e6b 11ab0cf9 85eb44e9 f80473f2 e9fe5c98 8cf573af 6bb47ecd
-          d45c022b 4c39e1b2 95952d42 87d7d5b3 9043b76c 13f1dedd f6c4f889 3fd175f5
-          92c391d5 8a88d090 ecdc6dde 89c26571 968b0d03 fd9cbf5b 16ac92db eafe797c
-          adebaff7 16cbdbcd 252be51f fb9a9fe2 51cc3a53 0c48e60e bdc9b476 0652e611
-          13857263 0304e004 362b2019 02e874a7 1fb6c956 66f07525 dc67c10e 616088b3
-          3ed1a8fc a3da1db0 d1b12354 df44766d ed41d8c1 b222b653 1cdf351d dca1772a
-          31e42df5 e5e5dbc8 e0ffe580 d70b63a0 ff33a10f ba2c1515 ea97b3d2 a2b5bef2
-          8c961e1a 8f1d6ca4 6137b986 7333d797 969e237d 82a44c81 e2a1d1ba 675f9507
-          a32711ee 16107bbc 454a4cb2 04d2abef d5fd0c51 ce506a08 31f991da 0c8f645c
-          03c33a8b 203f6e8d 673d3ad6 fe7d5b88 c95efbcc 61dc8b33 77d34432 35096204
-          921610d8 9e2747fb 3b21e3f8 eb1d5b02 03010001 a381b030 81ad300f 0603551d
-          130101ff 04053003 0101ff30 0b060355 1d0f0404 03020106 301d0603 551d0e04
-          1604141a 8462bc48 4c332504 d4eed0f6 03c41946 d1946b30 6e060355 1d230467
-          30658014 1a8462bc 484c3325 04d4eed0 f603c419 46d1946b a149a447 3045310b
-          30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164 6973204c
-          696d6974 6564311b 30190603 55040313 1251756f 56616469 7320526f 6f742043
-          41203282 02050930 0d06092a 864886f7 0d010105 05000382 0201003e 0a164d9f
-          065ba8ae 715d2f05 2f67e613 4583c436 f6f3c026 0c0db547 645df8b4 72c946a5
-          03182755 89787d76 ea963480 1720dce7 83f88dfc 07b8da5f 4d2e67b2 84fdd944
-          fc775081 e67cb4c9 0d0b7253 f8760707 4147960c fbe08226 93558cfe 221f6065
-          7c5fe726 b3f73290 9850d437 7155f692 2178f795 79faf82d 26876656 3077a637
-          78335210 58ae3f61 8ef26ab1 ef187e4a 5963ca8d a256d5a7 2fbc561f cf39c1e2
-          fb0aa815 2c7d4d7a 63c66c97 443cd26f c34a170a f890d257 a21951a5 2d9741da
-          074fa950 da908d94 46e13ef0 94fd1000 38f53be8 40e1b46e 561a20cc 6f588ded
-          2e458fd6 e9933fe7 b12cdf3a d6228cdc 84bb226f d0f8e4c6 39e90488 3cc3baeb
-          557a6d80 9924f56c 01fbf897 b0945beb fdd26ff1 77680d35 6423acb8 55a103d1
-          4d4219dc f8755956 a3f9a849 79f8af0e b911a07c b76aed34 d0b62662 381a870c
-          f8e8fd2e d3907f07 912a1dd6 7e5c8583 99b03808 3fe95ef9 3507e4c9 626e577f
-          a75095f7 bac89be6 8ea201c5 d666bf79 61f33c1c e1b9825c 5da0c3e9 d848bd19
-          a2111419 6eb2861b 683e4837 1a88b75d 965e9cc7 ef276208 e291195c d2f121dd
-          ba174282 97718153 31a99ff6 7d62bf72 e1a3931d cc8a265a 0938d0ce d70d8016
-          b478a53a 874c8d8a a5d54697 f22c10b9 bc5422c0 01506943 9ef4b2ef 6df8ecda
-          f1e3b1ef df918f54 2a0b25c1 2619c452 100565d5 8210eac2 31cd2e
-        quit
-      telnet timeout 10
-      ssh stricthostkeycheck
-      ssh timeout 15
-      ssh key-exchange group dh-group14-sha256
-      ssh 10.10.99.0 255.255.255.0 OUTSIDE
-      ssh 10.20.99.0 255.255.255.0 MGMT
-      console timeout 0
-      console serial
-      dhcpd dns 1.1.1.1 1.0.0.1
-      !
-      dhcpd address 10.20.10.100-10.20.10.149 CLIN
-      dhcpd enable CLIN
-      !
-      threat-detection basic-threat
-      threat-detection statistics access-list
-      no threat-detection statistics tcp-intercept
-      ntp server 10.10.99.10 source OUTSIDE prefer
-      dynamic-access-policy-record DfltAccessPolicy
-      !
-      class-map inspection_default
-       match default-inspection-traffic
-      !
-      !
-      policy-map type inspect dns preset_dns_map
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      policy-map global_policy
-       class inspection_default
-        inspect ip-options
-        inspect netbios
-        inspect rtsp
-        inspect sunrpc
-        inspect tftp
-        inspect dns preset_dns_map
-        inspect ftp
-        inspect h323 h225
-        inspect h323 ras
-        inspect rsh
-        inspect esmtp
-        inspect sqlnet
-        inspect sip
-        inspect skinny
-        inspect icmp
-      policy-map type inspect dns migrated_dns_map_2
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      policy-map type inspect dns migrated_dns_map_1
-       parameters
-        message-length maximum client auto
-        message-length maximum 512
-        no tcp-inspection
-      !
-      service-policy global_policy global
-      prompt hostname context
-      no call-home reporting anonymous
-      call-home
-       profile License
-        destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
-        destination transport-method http
-       profile CiscoTAC-1
-        no active
-        destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService
-        destination address email callhome@cisco.com
-        destination transport-method http
-        subscribe-to-alert-group diagnostic
-        subscribe-to-alert-group environment
-        subscribe-to-alert-group inventory periodic monthly
-        subscribe-to-alert-group configuration periodic monthly
-        subscribe-to-alert-group telemetry periodic daily
-      : end
+    content: ": Saved\n\n:\n: Serial Number: 9AFQSWH6LGM\n: Hardware:   ASAv, 2048 MB RAM, CPU Xeon 5500 series 2000 MHz\n\
+      :\nASA Version 9.23(1)\n!\nhostname OLY-FW1\ndomain-name hphs.lab\nenable password cisco12!@\nusername cisco password\
+      \ cisco12!@ privilege 15\nservice-module 0 keepalive-timeout 4\nservice-module 0 keepalive-counter 6\nnames\nno mac-address\
+      \ auto\n\n!\ninterface GigabitEthernet0/0\n description OLY-R1 border transit\n nameif OUTSIDE\n security-level 0\n\
+      \ ip address 198.51.100.6 255.255.255.252\n!\ninterface GigabitEthernet0/1\n description 802.1Q trunk to OLY-SW1\n no\
+      \ nameif\n no security-level\n no ip address\n!\ninterface GigabitEthernet0/1.10\n vlan 10\n nameif CLIN\n security-level\
+      \ 60\n ip address 10.20.10.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.30\n vlan 30\n nameif IMG\n security-level\
+      \ 50\n ip address 10.20.30.1 255.255.255.0\n!\ninterface GigabitEthernet0/1.99\n vlan 99\n nameif MGMT\n security-level\
+      \ 100\n ip address 10.20.99.1 255.255.255.0\n!\ninterface Management0/0\n no management-only\n shutdown\n no nameif\n\
+      \ no security-level\n no ip address\n!\nbanner login This is a private computer network operated by Harbor Point Health\
+      \ Services. Access to\nbanner login this network, its infrastructure, and all connected electronic systems is restricted\n\
+      banner login solely to authorized individuals for legitimate business purposes.\nbanner login  \nbanner login Unauthorized\
+      \ login, access, or use of this resource is strictly prohibited. It is\nbanner login subject to civil, criminal, and\
+      \ administrative penalties.\nbanner login  \nbanner login By attempting to log in, you explicitly acknowledge and agree\
+      \ that:\nbanner login  \nbanner login * You are an authorized user acting within your permitted scope.\nbanner login\
+      \  \nbanner login * You have no expectation of privacy regarding any activity on this network.\nbanner login  \nbanner\
+      \ login * All activities, communications, and data may be monitored, intercepted, recorded,\nbanner login read, or copied\
+      \ by authorized personnel.\nbanner login  \nbanner login * Evidence of unauthorized use or illegal activity will be\
+      \ disclosed to corporate\nbanner login management and law enforcement officials.\nbanner login  \nbanner login If you\
+      \ are not an authorized user of this system, DISCONNECT IMMEDIATELY.\nftp mode passive\ndns server-group DefaultDNS\n\
+      \ domain-name hphs.lab\nsame-security-traffic permit inter-interface\nsame-security-traffic permit intra-interface\n\
+      no object-group-search access-control\nobject-group network PUBLIC-DNS\n network-object host 1.1.1.1\n network-object\
+      \ host 1.0.0.1\nobject-group network BLOCKED-DEST\n network-object 10.0.0.0 255.0.0.0\n network-object 172.16.0.0 255.240.0.0\n\
+      \ network-object 192.168.0.0 255.255.0.0\n network-object 198.51.100.0 255.255.255.248\naccess-group OUTSIDE_IN in interface\
+      \ OUTSIDE\naccess-group CLIN_IN in interface CLIN\naccess-group IMG_IN in interface IMG\naccess-group MGMT_IN in interface\
+      \ MGMT\naccess-list CLIN_IN extended permit icmp any any\naccess-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0\
+      \ object-group PUBLIC-DNS eq domain\naccess-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 object-group PUBLIC-DNS\
+      \ eq domain\naccess-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 host 10.10.50.10 eq ntp\naccess-list CLIN_IN\
+      \ extended permit udp any eq bootpc host 255.255.255.255 eq bootps\naccess-list CLIN_IN extended permit udp 10.20.10.0\
+      \ 255.255.255.0 eq bootpc host 10.20.10.1 eq bootps\naccess-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0\
+      \ host 10.10.50.10 eq 8080\naccess-list CLIN_IN extended permit icmp 10.20.10.0 255.255.255.0 host 10.10.50.10\naccess-list\
+      \ CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 10.20.30.10 eq 8080\naccess-list CLIN_IN extended permit\
+      \ icmp 10.20.10.0 255.255.255.0 host 10.20.30.10\naccess-list CLIN_IN extended deny ip 10.20.10.0 255.255.255.0 object-group\
+      \ BLOCKED-DEST log interval 1\naccess-list CLIN_IN extended permit udp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq domain\n\
+      access-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 host 1.1.1.1 eq domain\naccess-list CLIN_IN extended\
+      \ permit tcp 10.20.10.0 255.255.255.0 any eq www\naccess-list CLIN_IN extended permit tcp 10.20.10.0 255.255.255.0 any\
+      \ eq https\naccess-list CLIN_IN extended deny ip any any log interval 1\naccess-list IMG_IN extended permit icmp any\
+      \ any\naccess-list IMG_IN extended permit udp host 10.20.30.10 object-group PUBLIC-DNS eq domain\naccess-list IMG_IN\
+      \ extended permit tcp host 10.20.30.10 object-group PUBLIC-DNS eq domain\naccess-list IMG_IN extended permit udp host\
+      \ 10.20.30.10 host 10.10.50.10 eq ntp\naccess-list IMG_IN extended permit tcp host 10.20.30.10 host 10.10.50.10 eq 8080\n\
+      access-list IMG_IN extended permit icmp host 10.20.30.10 host 10.10.50.10\naccess-list IMG_IN extended deny ip host\
+      \ 10.20.30.10 object-group BLOCKED-DEST log interval 1\naccess-list IMG_IN extended permit udp host 10.20.30.10 host\
+      \ 1.1.1.1 eq domain\naccess-list IMG_IN extended permit tcp host 10.20.30.10 host 1.1.1.1 eq domain\naccess-list IMG_IN\
+      \ extended permit tcp host 10.20.30.10 any eq www\naccess-list IMG_IN extended permit tcp host 10.20.30.10 any eq https\n\
+      access-list IMG_IN extended deny ip any any log interval 1\naccess-list MGMT_IN extended permit icmp any any\naccess-list\
+      \ MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq www\naccess-list MGMT_IN extended permit\
+      \ tcp 10.20.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq https\naccess-list MGMT_IN extended permit udp 10.20.99.0 255.255.255.0\
+      \ host 10.10.50.10 eq ntp\naccess-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 10.0.0.0 255.0.0.0 eq ssh\n\
+      access-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.2 eq ssh\naccess-list MGMT_IN extended\
+      \ permit tcp 10.20.99.0 255.255.255.0 host 203.0.113.1 eq ssh\naccess-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0\
+      \ host 203.0.113.5 eq ssh\naccess-list MGMT_IN extended permit tcp 10.20.99.0 255.255.255.0 host 198.51.100.9 eq ssh\n\
+      access-list MGMT_IN extended permit udp host 10.20.99.11 host 10.10.50.10 eq ntp\naccess-list MGMT_IN extended permit\
+      \ udp host 10.20.99.11 host 10.10.50.10 eq syslog\naccess-list MGMT_IN extended deny ip any any log interval 1\naccess-list\
+      \ OUTSIDE_IN extended permit icmp any any\naccess-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0\
+      \ 255.255.0.0 eq www\naccess-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq https\n\
+      access-list OUTSIDE_IN extended permit tcp 10.10.99.0 255.255.255.0 10.20.0.0 255.255.0.0 eq ssh\naccess-list OUTSIDE_IN\
+      \ extended permit tcp host 198.51.100.10 host 10.20.30.10 eq ssh\naccess-list OUTSIDE_IN extended permit tcp 10.10.10.0\
+      \ 255.255.255.0 host 10.20.30.10 eq 8080\naccess-list OUTSIDE_IN extended permit icmp 10.10.10.0 255.255.255.0 host\
+      \ 10.20.30.10\naccess-list OUTSIDE_IN extended permit icmp host 10.10.50.10 10.20.0.0 255.255.0.0\naccess-list OUTSIDE_IN\
+      \ extended permit tcp host 10.10.50.10 host 10.20.30.10 eq 8080\naccess-list OUTSIDE_IN extended deny ip any any log\
+      \ interval 1\npager lines 23\nmtu OUTSIDE 1500\nmtu CLIN 1500\nmtu IMG 1500\nmtu MGMT 1500\nno failover\nno failover\
+      \ wait-disable\nno monitor-interface CLIN\nno monitor-interface IMG\nno monitor-interface MGMT\nno monitor-interface\
+      \ service-module\nicmp permit any OUTSIDE\nicmp permit any CLIN\nicmp permit any IMG\nicmp permit any MGMT\nicmp unreachable\
+      \ rate-limit 1 burst-size 1\nno asdm history enable\narp timeout 14400\nno arp permit-nonconnected\narp rate-limit 8192\n\
+      logging enable\nlogging timestamp\nlogging buffered informational\nlogging trap informational\nlogging device-id hostname\n\
+      logging host OUTSIDE 10.10.50.10\nroute OUTSIDE 0.0.0.0 0.0.0.0 198.51.100.5 1\ntimeout xlate 3:00:00\ntimeout pat-xlate\
+      \ 0:00:30\ntimeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02\ntimeout sunrpc 0:10:00 h323\
+      \ 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00\ntimeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect\
+      \ 0:02:00\ntimeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute\ntimeout tcp-proxy-reassembly 0:01:00\ntimeout\
+      \ floating-conn 0:00:00\ntimeout conn-holddown 0:00:15\ntimeout igp stale-route 0:01:10\nuser-identity default-domain\
+      \ LOCAL\naaa authentication ssh console LOCAL\naaa authentication serial console LOCAL\naaa authentication login-history\n\
+      no snmp-server location\nno snmp-server contact\nno sysopt connection permit-vpn\ncrypto ipsec security-association\
+      \ pmtu-aging infinite\ncrypto ca trustpoint _SmartCallHome_ServerCA\n no validation-usage\n crl configure\ncrypto ca\
+      \ trustpoint _SmartCallHome_ServerCA2\n no validation-usage\n crl configure\ncrypto ca trustpool policy\n auto-import\n\
+      crypto ca certificate chain _SmartCallHome_ServerCA\n certificate ca 0a0142800000014523c844b500000002\n    30820560\
+      \ 30820348 a0030201 0202100a 01428000 00014523 c844b500 00000230\n    0d06092a 864886f7 0d01010b 0500304a 310b3009 06035504\
+      \ 06130255 53311230\n    10060355 040a1309 4964656e 54727573 74312730 25060355 0403131e 4964656e\n    54727573 7420436f\
+      \ 6d6d6572 6369616c 20526f6f 74204341 2031301e 170d3134\n    30313136 31383132 32335a17 0d333430 31313631 38313232 335a304a\
+      \ 310b3009\n    06035504 06130255 53311230 10060355 040a1309 4964656e 54727573 74312730\n    25060355 0403131e 4964656e\
+      \ 54727573 7420436f 6d6d6572 6369616c 20526f6f\n    74204341 20313082 0222300d 06092a86 4886f70d 01010105 00038202 0f003082\n\
+      \    020a0282 020100a7 5019de3f 993dd433 46f16f51 6182b2a9 4f8f6789 5d84d953\n    dd0c28d9 d7f0ffae 95437299 f9b55d7c\
+      \ 8ac142e1 315074d1 810d7ccd 9b21ab43\n    e2acad5e 866ef309 8a1f5a32 bda2eb94 f9e85c0a ecff98d2 af71b3b4 539f4e87\n\
+      \    ef92bcbd ec4f3230 884b175e 57c453c2 f602978d d9622bbf 241f628d dfc3b829\n    4b49783c 93608822 fc99da36 c8c2a2d4\
+      \ 2c540067 356e73bf 0258f0a4 dde5b0a2\n    267acae0 36a51916 f5fdb7ef ae3f40f5 6d5a04fd ce34ca24 dc74231b 5d331312\n\
+      \    5dc40125 f630dd02 5d9fe0d5 47bdb4eb 1ba1bb49 49d89f5b 02f38ae4 2490e462\n    4f4fc1af 8b0e7417 a8d17288 6a7a0149\
+      \ ccb44679 c617b1da 981e0759 fa752185\n    65dd9056 cefbaba5 609dc49d f952b08b bd87f98f 2b230a23 763bf733 e1c900f3\n\
+      \    69f94ba2 e04ebc7e 93398407 f744707e fe075ae5 b1acd118 ccf235e5 494908ca\n    56c93dfb 0f187d8b 3bc113c2 4d8fc94f\
+      \ 0e37e91f a10e6adf 622ecb35 0651792c\n    c82538f4 fa4ba789 5c9cd2e3 0d39864a 747cd559 87c23f4e 0c5c52f4 3df75282\n\
+      \    f1eaa3ac fd49341a 28f34188 3a13eee8 deff991d 5fbacbe8 1ef2b950 60c031d3\n    73e5efbe a0ed330b 74be2020 c4676cf0\
+      \ 08037a55 807f464e 96a7f41e 3ee1f6d8\n    09e13364 2b63d732 5e9ff9c0 7b0f786f 97bc939a f99c1290 787a8087 15d77274\n\
+      \    9c557478 b1bae16e 7004ba4f a0ba68c3 7bff31f0 733d3d94 2ab10b41 0ea0fe4d\n    88656b79 33b4d702 03010001 a3423040\
+      \ 300e0603 551d0f01 01ff0404 03020106\n    300f0603 551d1301 01ff0405 30030101 ff301d06 03551d0e 04160414 ed4419c0\n\
+      \    d3f0068b eea47bbe 42e72654 c88e3676 300d0609 2a864886 f70d0101 0b050003\n    82020100 0dae9032 f6a64b7c 44761961\
+      \ 1e2728cd 5e54ef25 bce30890 f929d7ae\n    6808e194 0058ef2e 2e7e5352 8cb65c07 ea88ba99 8b5094d7 8280df61 090093ad\n\
+      \    0d14e6ce c1f23794 78b05f9c b3a273b8 8f059338 cd8d3eb0 b8fbc0cf b1f2ec2d\n    2d1bccec aa9ab3aa 60821b2d 3bc3843d\
+      \ 578a961e 9c75b8d3 30cd6008 8390d38e\n    54f14d66 c05d7403 40a3ee85 7ec21f77 9c06e8c1 a7185d52 95edc9dd 259e6dfa\n\
+      \    a9eda33a 34d0597b daed50f3 35bfedeb 144d31c7 60f4daf1 879ce248 e2c6c537\n    fb0610fa 75596631 4729da76 9a1ce982\
+      \ aeef9ab9 51f78823 9a699562 3ce55580\n    36d75402 fff1b95d ced4236f d845844a 5b65ef89 0cdd14a7 20cb18a5 25b40df9\n\
+      \    01f0a2d2 f400c874 8ea12a48 8e65db13 c4e22517 7debbe87 5b172054 51934a53\n    030bec5d ca33ed62 fd45c72f 5bdc58a0\
+      \ 8039e6fa d7fe1314 a6ed3d94 4a4274d4\n    c3775973 cd8f46be 5538effa e89132ea 97580422 de38c3cc bc6dc933 3a6a0a69\n\
+      \    3fa0c8ea 728f8c63 8623bd6d 3c969e95 e0494caa a2b92a1b 9c368178 edc3e846\n    e2265944 751ed975 8951cd10 849d6160\
+      \ cb5df997 224d8e98 e6e37ff6 5bbbaecd\n    ca4a816b 5e0bf351 e1742be9 7e27a7d9 99494ef8 a580db25 0f1c6362 8ac93367\n\
+      \    6b3c1083 c6addea8 cd168e8d f0073771 9ff2abfc 41f5c18b ec00375d 09e54e80\n    effab15c 3806a51b 4ae1dc38 2d3cdcab\
+      \ 1f901ad5 4a9ceed1 706cccee f457f818\n    ba846e87\n  quit\ncrypto ca certificate chain _SmartCallHome_ServerCA2\n\
+      \ certificate ca 0509\n    308205b7 3082039f a0030201 02020205 09300d06 092a8648 86f70d01 01050500\n    3045310b 30090603\
+      \ 55040613 02424d31 19301706 0355040a 13105175 6f566164\n    6973204c 696d6974 6564311b 30190603 55040313 1251756f 56616469\
+      \ 7320526f\n    6f742043 41203230 1e170d30 36313132 34313832 3730305a 170d3331 31313234\n    31383233 33335a30 45310b30\
+      \ 09060355 04061302 424d3119 30170603 55040a13\n    1051756f 56616469 73204c69 6d697465 64311b30 19060355 04031312 51756f56\n\
+      \    61646973 20526f6f 74204341 20323082 0222300d 06092a86 4886f70d 01010105\n    00038202 0f003082 020a0282 0201009a\
+      \ 18ca4b94 0d002daf 03298af0 0f81c8ae\n    4c19851d 089fab29 4485f32f 81ad321e 9046bfa3 86261a1e fe7e1c18 3a5c9c60\n\
+      \    172a3a74 8333307d 615411cb edabe0e6 d2a27ef5 6b6f18b7 0a0b2dfd e93eef0a\n    c6b310e9 dcc24617 f85dfda4 daff9e49\
+      \ 5a9ce633 e62496f7 3fba5b2b 1c7a35c2\n    d667feab 66508b6d 28602bef d760c3c7 93bc8d36 91f37ff8 db1113c4 9c7776c1\n\
+      \    aeb7026a 817aa945 83e205e6 b956c194 378f4871 6322ec17 6507958a 4bdf8fc6\n    5a0ae5b0 e35f5e6b 11ab0cf9 85eb44e9\
+      \ f80473f2 e9fe5c98 8cf573af 6bb47ecd\n    d45c022b 4c39e1b2 95952d42 87d7d5b3 9043b76c 13f1dedd f6c4f889 3fd175f5\n\
+      \    92c391d5 8a88d090 ecdc6dde 89c26571 968b0d03 fd9cbf5b 16ac92db eafe797c\n    adebaff7 16cbdbcd 252be51f fb9a9fe2\
+      \ 51cc3a53 0c48e60e bdc9b476 0652e611\n    13857263 0304e004 362b2019 02e874a7 1fb6c956 66f07525 dc67c10e 616088b3\n\
+      \    3ed1a8fc a3da1db0 d1b12354 df44766d ed41d8c1 b222b653 1cdf351d dca1772a\n    31e42df5 e5e5dbc8 e0ffe580 d70b63a0\
+      \ ff33a10f ba2c1515 ea97b3d2 a2b5bef2\n    8c961e1a 8f1d6ca4 6137b986 7333d797 969e237d 82a44c81 e2a1d1ba 675f9507\n\
+      \    a32711ee 16107bbc 454a4cb2 04d2abef d5fd0c51 ce506a08 31f991da 0c8f645c\n    03c33a8b 203f6e8d 673d3ad6 fe7d5b88\
+      \ c95efbcc 61dc8b33 77d34432 35096204\n    921610d8 9e2747fb 3b21e3f8 eb1d5b02 03010001 a381b030 81ad300f 0603551d\n\
+      \    130101ff 04053003 0101ff30 0b060355 1d0f0404 03020106 301d0603 551d0e04\n    1604141a 8462bc48 4c332504 d4eed0f6\
+      \ 03c41946 d1946b30 6e060355 1d230467\n    30658014 1a8462bc 484c3325 04d4eed0 f603c419 46d1946b a149a447 3045310b\n\
+      \    30090603 55040613 02424d31 19301706 0355040a 13105175 6f566164 6973204c\n    696d6974 6564311b 30190603 55040313\
+      \ 1251756f 56616469 7320526f 6f742043\n    41203282 02050930 0d06092a 864886f7 0d010105 05000382 0201003e 0a164d9f\n\
+      \    065ba8ae 715d2f05 2f67e613 4583c436 f6f3c026 0c0db547 645df8b4 72c946a5\n    03182755 89787d76 ea963480 1720dce7\
+      \ 83f88dfc 07b8da5f 4d2e67b2 84fdd944\n    fc775081 e67cb4c9 0d0b7253 f8760707 4147960c fbe08226 93558cfe 221f6065\n\
+      \    7c5fe726 b3f73290 9850d437 7155f692 2178f795 79faf82d 26876656 3077a637\n    78335210 58ae3f61 8ef26ab1 ef187e4a\
+      \ 5963ca8d a256d5a7 2fbc561f cf39c1e2\n    fb0aa815 2c7d4d7a 63c66c97 443cd26f c34a170a f890d257 a21951a5 2d9741da\n\
+      \    074fa950 da908d94 46e13ef0 94fd1000 38f53be8 40e1b46e 561a20cc 6f588ded\n    2e458fd6 e9933fe7 b12cdf3a d6228cdc\
+      \ 84bb226f d0f8e4c6 39e90488 3cc3baeb\n    557a6d80 9924f56c 01fbf897 b0945beb fdd26ff1 77680d35 6423acb8 55a103d1\n\
+      \    4d4219dc f8755956 a3f9a849 79f8af0e b911a07c b76aed34 d0b62662 381a870c\n    f8e8fd2e d3907f07 912a1dd6 7e5c8583\
+      \ 99b03808 3fe95ef9 3507e4c9 626e577f\n    a75095f7 bac89be6 8ea201c5 d666bf79 61f33c1c e1b9825c 5da0c3e9 d848bd19\n\
+      \    a2111419 6eb2861b 683e4837 1a88b75d 965e9cc7 ef276208 e291195c d2f121dd\n    ba174282 97718153 31a99ff6 7d62bf72\
+      \ e1a3931d cc8a265a 0938d0ce d70d8016\n    b478a53a 874c8d8a a5d54697 f22c10b9 bc5422c0 01506943 9ef4b2ef 6df8ecda\n\
+      \    f1e3b1ef df918f54 2a0b25c1 2619c452 100565d5 8210eac2 31cd2e\n  quit\ntelnet timeout 10\nssh stricthostkeycheck\n\
+      ssh timeout 15\nssh key-exchange group dh-group14-sha256\nssh 10.10.99.0 255.255.255.0 OUTSIDE\nssh 10.20.99.0 255.255.255.0\
+      \ MGMT\nconsole timeout 0\nconsole serial\ndhcpd dns 1.1.1.1 1.0.0.1\n!\ndhcpd address 10.20.10.100-10.20.10.149 CLIN\n\
+      dhcpd enable CLIN\n!\nthreat-detection basic-threat\nthreat-detection statistics access-list\nno threat-detection statistics\
+      \ tcp-intercept\nntp server 10.10.50.10 source OUTSIDE prefer\ndynamic-access-policy-record DfltAccessPolicy\n!\nclass-map\
+      \ inspection_default\n match default-inspection-traffic\n!\n!\npolicy-map type inspect dns preset_dns_map\n parameters\n\
+      \  message-length maximum client auto\n  message-length maximum 512\n  no tcp-inspection\npolicy-map global_policy\n\
+      \ class inspection_default\n  inspect ip-options\n  inspect netbios\n  inspect rtsp\n  inspect sunrpc\n  inspect tftp\n\
+      \  inspect dns preset_dns_map\n  inspect ftp\n  inspect h323 h225\n  inspect h323 ras\n  inspect rsh\n  inspect esmtp\n\
+      \  inspect sqlnet\n  inspect sip\n  inspect skinny\n  inspect icmp\npolicy-map type inspect dns migrated_dns_map_2\n\
+      \ parameters\n  message-length maximum client auto\n  message-length maximum 512\n  no tcp-inspection\npolicy-map type\
+      \ inspect dns migrated_dns_map_1\n parameters\n  message-length maximum client auto\n  message-length maximum 512\n\
+      \  no tcp-inspection\n!\nservice-policy global_policy global\nprompt hostname context\nno call-home reporting anonymous\n\
+      call-home\n profile License\n  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService\n\
+      \  destination transport-method http\n profile CiscoTAC-1\n  no active\n  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService\n\
+      \  destination address email callhome@cisco.com\n  destination transport-method http\n  subscribe-to-alert-group diagnostic\n\
+      \  subscribe-to-alert-group environment\n  subscribe-to-alert-group inventory periodic monthly\n  subscribe-to-alert-group\
+      \ configuration periodic monthly\n  subscribe-to-alert-group telemetry periodic daily\n: end"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -1039,32 +635,39 @@ nodes:
       \ D58D2D25\n  1E52FBA4 18A9330C A6FE2E2F 78E0B445 E04C6B0F 7116B931 B0E9170E 2699A9CE\n  6B9AD044 D62F0080 AEC5120C\
       \ 606ACEE3 7787E13E 16F3F133 08E6E271 F9E5AE93\n  29B3FD54 70BB0AD7 80036445 C31ECA06 D6E29B0D EB542704 C438D7E2 BB01E6CC\n\
       \  11D0B05C F38EDEDB 02560B05 BD1D73E0 347E\n  \tquit\n!\n!\nmemory free low-watermark processor 79497\n!\n!\nspanning-tree\
-      \ mode rapid-pvst\nspanning-tree extend system-id\nspanning-tree vlan 10,20,40,99 priority 4096\n!\n!\nvtp mode transparent\n\
-      vlan 10\n!\nvlan 20\n!\nvlan 40\n!\nvlan 99\n!\nvlan internal allocation policy ascending\n!\n!\n!\n!\n!\ninterface\
-      \ Ethernet0/0\n description TAC-FW1 G0/1\n switchport trunk encapsulation dot1q\n switchport trunk allowed vlan 10,20,40,99\n\
-      \ switchport mode trunk\n switchport nonegotiate\n!\ninterface Ethernet0/1\n shutdown\n!\ninterface Ethernet0/2\n shutdown\n\
-      !\ninterface Ethernet0/3\n shutdown\n!\ninterface Ethernet1/0\n shutdown\n!\ninterface Ethernet1/1\n description TAC-CLINIC1\n\
-      \ switchport access vlan 10\n switchport mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\n\
-      interface Ethernet1/2\n description TAC-ADMIN1\n switchport access vlan 20\n switchport mode access\n spanning-tree\
-      \ portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/3\n shutdown\n!\ninterface Ethernet2/0\n description\
-      \ TAC-Services\n switchport access vlan 99\n switchport mode access\n spanning-tree portfast\n spanning-tree bpduguard\
-      \ enable\n!\ninterface Ethernet2/1\n shutdown\n!\ninterface Ethernet2/2\n shutdown\n!\ninterface Ethernet2/3\n shutdown\n\
-      !\ninterface Ethernet3/0\n shutdown\n!\ninterface Ethernet3/1\n shutdown\n!\ninterface Ethernet3/2\n shutdown\n!\ninterface\
-      \ Ethernet3/3\n shutdown\n!\ninterface Ethernet4/0\n shutdown\n!\ninterface Ethernet4/1\n shutdown\n!\ninterface Ethernet4/2\n\
-      \ shutdown\n!\ninterface Ethernet4/3\n shutdown\n!\ninterface Ethernet5/0\n shutdown\n!\ninterface Ethernet5/1\n shutdown\n\
-      !\ninterface Ethernet5/2\n shutdown\n!\ninterface Ethernet5/3\n shutdown\n!\ninterface Ethernet6/0\n shutdown\n!\ninterface\
-      \ Ethernet6/1\n shutdown\n!\ninterface Ethernet6/2\n shutdown\n!\ninterface Ethernet6/3\n shutdown\n!\ninterface Ethernet7/0\n\
-      \ shutdown\n!\ninterface Ethernet7/1\n shutdown\n!\ninterface Ethernet7/2\n description TAC-SW2 E7/2 primary\n switchport\
-      \ trunk encapsulation dot1q\n switchport trunk allowed vlan 10,20,40,99\n switchport mode trunk\n switchport nonegotiate\n\
-      !\ninterface Ethernet7/3\n description TAC-SW2 E7/3 alternate\n switchport trunk encapsulation dot1q\n switchport trunk\
-      \ allowed vlan 10,20,40,99\n switchport mode trunk\n switchport nonegotiate\n!\ninterface Vlan99\n ip address 10.10.99.11\
-      \ 255.255.255.0\n!\nip default-gateway 10.10.99.1\nip forward-protocol nd\nip forward-protocol udp\n!\n!\nno ip http\
-      \ server\nno ip http secure-server\nip ssh bulk-mode 131072\n!\nip access-list standard SSH-ADMIN\n 10 permit 10.10.99.0\
-      \ 0.0.0.255\n 20 permit 10.20.99.0 0.0.0.255\n 30 deny any log\n!\nno logging btrace\nlogging source-interface Vlan99\n\
-      logging host 10.10.99.10\n!\n!\n!\ncontrol-plane\n!\n!\nbanner login ^CHPHS authorized lab access only. Activity is\
-      \ monitored. Follow the acceptable use policy.^C\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n login local\n\
-      line aux 0\nline vty 0 4\n access-class SSH-ADMIN in\n exec-timeout 0 0\n transport input ssh\n login local\n!\nntp\
-      \ source Vlan99\nntp server 10.10.99.10 prefer\n!\nend"
+      \ mode rapid-pvst\nspanning-tree extend system-id\nspanning-tree vlan 10,20,40,50,99 priority 4096\n!\n!\nvtp mode transparent\n\
+      vlan 10\n!\nvlan 20\n!\nvlan 40\n!\nvlan 50\n name SERVERS\n!\nvlan 99\n!\nvlan internal allocation policy ascending\n\
+      !\n!\n!\n!\n!\ninterface Ethernet0/0\n description TAC-FW1 G0/1\n switchport trunk encapsulation dot1q\n switchport\
+      \ trunk allowed vlan 10,20,40,50,99\n switchport mode trunk\n switchport nonegotiate\n!\ninterface Ethernet0/1\n shutdown\n\
+      !\ninterface Ethernet0/2\n shutdown\n!\ninterface Ethernet0/3\n shutdown\n!\ninterface Ethernet1/0\n shutdown\n!\ninterface\
+      \ Ethernet1/1\n description TAC-CLINIC1\n switchport access vlan 10\n switchport mode access\n spanning-tree portfast\n\
+      \ spanning-tree bpduguard enable\n!\ninterface Ethernet1/2\n description TAC-ADMIN1\n switchport access vlan 20\n switchport\
+      \ mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/3\n shutdown\n!\ninterface\
+      \ Ethernet2/0\n description TAC-Services - SERVER VLAN 50\n switchport access vlan 50\n switchport mode access\n spanning-tree\
+      \ portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet2/1\n shutdown\n!\ninterface Ethernet2/2\n shutdown\n\
+      !\ninterface Ethernet2/3\n shutdown\n!\ninterface Ethernet3/0\n shutdown\n!\ninterface Ethernet3/1\n shutdown\n!\ninterface\
+      \ Ethernet3/2\n shutdown\n!\ninterface Ethernet3/3\n shutdown\n!\ninterface Ethernet4/0\n shutdown\n!\ninterface Ethernet4/1\n\
+      \ shutdown\n!\ninterface Ethernet4/2\n shutdown\n!\ninterface Ethernet4/3\n shutdown\n!\ninterface Ethernet5/0\n shutdown\n\
+      !\ninterface Ethernet5/1\n shutdown\n!\ninterface Ethernet5/2\n shutdown\n!\ninterface Ethernet5/3\n shutdown\n!\ninterface\
+      \ Ethernet6/0\n shutdown\n!\ninterface Ethernet6/1\n shutdown\n!\ninterface Ethernet6/2\n shutdown\n!\ninterface Ethernet6/3\n\
+      \ shutdown\n!\ninterface Ethernet7/0\n shutdown\n!\ninterface Ethernet7/1\n shutdown\n!\ninterface Ethernet7/2\n description\
+      \ TAC-SW2 E7/2 primary\n switchport trunk encapsulation dot1q\n switchport trunk allowed vlan 10,20,40,50,99\n switchport\
+      \ mode trunk\n switchport nonegotiate\n!\ninterface Ethernet7/3\n description TAC-SW2 E7/3 alternate\n switchport trunk\
+      \ encapsulation dot1q\n switchport trunk allowed vlan 10,20,40,50,99\n switchport mode trunk\n switchport nonegotiate\n\
+      !\ninterface Vlan99\n ip address 10.10.99.11 255.255.255.0\n!\nip default-gateway 10.10.99.1\nip forward-protocol nd\n\
+      ip forward-protocol udp\n!\n!\nno ip http server\nno ip http secure-server\nip ssh bulk-mode 131072\n!\nip access-list\
+      \ standard SSH-ADMIN\n 10 permit 10.10.99.0 0.0.0.255\n 20 permit 10.20.99.0 0.0.0.255\n 30 deny any log\n!\nno logging\
+      \ btrace\nlogging source-interface Vlan99\nlogging host 10.10.50.10\n!\n!\n!\ncontrol-plane\n!\n!\nbanner login #\n\
+      This is a private computer network operated by Harbor Point Health Services. Access to\nthis network, its infrastructure,\
+      \ and all connected electronic systems is restricted\nsolely to authorized individuals for legitimate business purposes.\n\
+      \nUnauthorized login, access, or use of this resource is strictly prohibited. It is\nsubject to civil, criminal, and\
+      \ administrative penalties.\n\nBy attempting to log in, you explicitly acknowledge and agree that:\n\n* You are an authorized\
+      \ user acting within your permitted scope.\n\n* You have no expectation of privacy regarding any activity on this network.\n\
+      \n* All activities, communications, and data may be monitored, intercepted, recorded,\nread, or copied by authorized\
+      \ personnel.\n\n* Evidence of unauthorized use or illegal activity will be disclosed to corporate\nmanagement and law\
+      \ enforcement officials.\n\nIf you are not an authorized user of this system, DISCONNECT IMMEDIATELY.\n#\n!\nline con\
+      \ 0\n exec-timeout 0 0\n logging synchronous\n login local\nline aux 0\nline vty 0 4\n access-class SSH-ADMIN in\n exec-timeout\
+      \ 0 0\n transport input ssh\n login local\n!\nntp source Vlan99\nntp server 10.10.50.10 prefer\n!\nend"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -1271,14 +874,14 @@ nodes:
       \ 7C65F9FF\n  8E7DEA47 29E0B625 4EAF81E4 2DB568AD F91AA364 9850D0BA 4120A146 C0122376\n  44BA7BA2 B0F98DF8 DB8CAB96\
       \ E580CB14 54D83E8F 07A27EF4 8CDAD451 A803F492\n  A6D95EF3 B90C8E51 7C86987F 2B9E48FC 2A82ABC0 FA355916 2C094A5C 4F5D0FDC\n\
       \  E2EFBFB9 CFD8CEF3 1D58174D 18B7B70D 0517\n  \tquit\n!\n!\nmemory free low-watermark processor 79497\n!\n!\nspanning-tree\
-      \ mode rapid-pvst\nspanning-tree extend system-id\nspanning-tree vlan 10,20,40,99 priority 8192\n!\n!\nvtp mode transparent\n\
-      vlan 10\n!\nvlan 20\n!\nvlan 40\n!\nvlan 99\n!\nvlan internal allocation policy ascending\n!\n!\n!\n!\n!\ninterface\
-      \ Ethernet0/0\n shutdown\n!\ninterface Ethernet0/1\n shutdown\n!\ninterface Ethernet0/2\n shutdown\n!\ninterface Ethernet0/3\n\
-      \ shutdown\n!\ninterface Ethernet1/0\n shutdown\n!\ninterface Ethernet1/1\n description TAC-CLINIC2\n switchport access\
-      \ vlan 10\n switchport mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/2\n\
-      \ description TAC-GUEST\n switchport access vlan 40\n switchport mode access\n spanning-tree portfast\n spanning-tree\
-      \ bpduguard enable\n!\ninterface Ethernet1/3\n description TAC-ADMIN2\n switchport access vlan 20\n switchport mode\
-      \ access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet2/0\n shutdown\n!\ninterface\
+      \ mode rapid-pvst\nspanning-tree extend system-id\nspanning-tree vlan 10,20,40,50,99 priority 8192\n!\n!\nvtp mode transparent\n\
+      vlan 10\n!\nvlan 20\n!\nvlan 40\n!\nvlan 50\n name SERVERS\n!\nvlan 99\n!\nvlan internal allocation policy ascending\n\
+      !\n!\n!\n!\n!\ninterface Ethernet0/0\n shutdown\n!\ninterface Ethernet0/1\n shutdown\n!\ninterface Ethernet0/2\n shutdown\n\
+      !\ninterface Ethernet0/3\n shutdown\n!\ninterface Ethernet1/0\n shutdown\n!\ninterface Ethernet1/1\n description TAC-CLINIC2\n\
+      \ switchport access vlan 10\n switchport mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\n\
+      interface Ethernet1/2\n description TAC-GUEST\n switchport access vlan 40\n switchport mode access\n spanning-tree portfast\n\
+      \ spanning-tree bpduguard enable\n!\ninterface Ethernet1/3\n description TAC-ADMIN2\n switchport access vlan 20\n switchport\
+      \ mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet2/0\n shutdown\n!\ninterface\
       \ Ethernet2/1\n shutdown\n!\ninterface Ethernet2/2\n shutdown\n!\ninterface Ethernet2/3\n shutdown\n!\ninterface Ethernet3/0\n\
       \ shutdown\n!\ninterface Ethernet3/1\n shutdown\n!\ninterface Ethernet3/2\n shutdown\n!\ninterface Ethernet3/3\n shutdown\n\
       !\ninterface Ethernet4/0\n shutdown\n!\ninterface Ethernet4/1\n shutdown\n!\ninterface Ethernet4/2\n shutdown\n!\ninterface\
@@ -1286,17 +889,24 @@ nodes:
       \ shutdown\n!\ninterface Ethernet5/3\n shutdown\n!\ninterface Ethernet6/0\n shutdown\n!\ninterface Ethernet6/1\n shutdown\n\
       !\ninterface Ethernet6/2\n shutdown\n!\ninterface Ethernet6/3\n shutdown\n!\ninterface Ethernet7/0\n shutdown\n!\ninterface\
       \ Ethernet7/1\n shutdown\n!\ninterface Ethernet7/2\n description TAC-SW1 E7/2 primary\n switchport trunk encapsulation\
-      \ dot1q\n switchport trunk allowed vlan 10,20,40,99\n switchport mode trunk\n switchport nonegotiate\n spanning-tree\
-      \ vlan 10,20,40,99 cost 10\n!\ninterface Ethernet7/3\n description TAC-SW1 E7/3 alternate\n switchport trunk encapsulation\
-      \ dot1q\n switchport trunk allowed vlan 10,20,40,99\n switchport mode trunk\n switchport nonegotiate\n spanning-tree\
-      \ vlan 10,20,40,99 cost 20\n!\ninterface Vlan99\n ip address 10.10.99.12 255.255.255.0\n!\nip default-gateway 10.10.99.1\n\
+      \ dot1q\n switchport trunk allowed vlan 10,20,40,50,99\n switchport mode trunk\n switchport nonegotiate\n spanning-tree\
+      \ vlan 10,20,40,50,99 cost 10\n!\ninterface Ethernet7/3\n description TAC-SW1 E7/3 alternate\n switchport trunk encapsulation\
+      \ dot1q\n switchport trunk allowed vlan 10,20,40,50,99\n switchport mode trunk\n switchport nonegotiate\n spanning-tree\
+      \ vlan 10,20,40,50,99 cost 20\n!\ninterface Vlan99\n ip address 10.10.99.12 255.255.255.0\n!\nip default-gateway 10.10.99.1\n\
       ip forward-protocol nd\nip forward-protocol udp\n!\n!\nno ip http server\nno ip http secure-server\nip ssh bulk-mode\
       \ 131072\n!\nip access-list standard SSH-ADMIN\n 10 permit 10.10.99.0 0.0.0.255\n 20 permit 10.20.99.0 0.0.0.255\n 30\
-      \ deny any log\n!\nno logging btrace\nlogging source-interface Vlan99\nlogging host 10.10.99.1\n!\n!\n!\ncontrol-plane\n\
-      !\n!\nbanner login ^CHPHS authorized lab access only. Activity is monitored. Follow the acceptable use policy.^C\n!\n\
-      line con 0\n exec-timeout 0 0\n logging synchronous\n login local\nline aux 0\nline vty 0 4\n access-class SSH-ADMIN\
-      \ in\n exec-timeout 0 0\n transport input ssh\n login local\n!\nntp source Vlan99\nntp server 10.10.99.10 prefer\n!\n\
-      end"
+      \ deny any log\n!\nno logging btrace\nlogging source-interface Vlan99\nlogging host 10.10.50.10\n!\n!\n!\ncontrol-plane\n\
+      !\n!\nbanner login #\nThis is a private computer network operated by Harbor Point Health Services. Access to\nthis network,\
+      \ its infrastructure, and all connected electronic systems is restricted\nsolely to authorized individuals for legitimate\
+      \ business purposes.\n\nUnauthorized login, access, or use of this resource is strictly prohibited. It is\nsubject to\
+      \ civil, criminal, and administrative penalties.\n\nBy attempting to log in, you explicitly acknowledge and agree that:\n\
+      \n* You are an authorized user acting within your permitted scope.\n\n* You have no expectation of privacy regarding\
+      \ any activity on this network.\n\n* All activities, communications, and data may be monitored, intercepted, recorded,\n\
+      read, or copied by authorized personnel.\n\n* Evidence of unauthorized use or illegal activity will be disclosed to\
+      \ corporate\nmanagement and law enforcement officials.\n\nIf you are not an authorized user of this system, DISCONNECT\
+      \ IMMEDIATELY.\n#\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n login local\nline aux 0\nline vty 0 4\n\
+      \ access-class SSH-ADMIN in\n exec-timeout 0 0\n transport input ssh\n login local\n!\nntp source Vlan99\nntp server\
+      \ 10.10.50.10 prefer\n!\nend"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -1511,14 +1121,21 @@ nodes:
       \ shutdown\n!\ninterface Ethernet1/0\n shutdown\n!\ninterface Ethernet1/1\n description OLY-CLINIC1\n switchport access\
       \ vlan 10\n switchport mode access\n spanning-tree portfast\n spanning-tree bpduguard enable\n!\ninterface Ethernet1/2\n\
       \ description OLY-IMG1\n switchport access vlan 30\n switchport mode access\n spanning-tree portfast\n spanning-tree\
-      \ bpduguard enable\n!\ninterface Ethernet1/3\n!\ninterface Vlan99\n ip address 10.20.99.11 255.255.255.0\n!\nip default-gateway\
-      \ 10.20.99.1\nip forward-protocol nd\nip forward-protocol udp\n!\n!\nno ip http server\nno ip http secure-server\nip\
-      \ ssh bulk-mode 131072\n!\nip access-list standard SSH-ADMIN\n 10 permit 10.10.99.0 0.0.0.255\n 20 permit 10.20.99.0\
-      \ 0.0.0.255\n 30 deny any log\n!\nno logging btrace\nlogging source-interface Vlan99\nlogging host 10.10.99.10\n!\n\
-      !\n!\ncontrol-plane\n!\n!\nbanner login ^CHPHS authorized lab access only. Activity is monitored. Follow the acceptable\
-      \ use policy.^C\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n login local\nline aux 0\nline vty 0 4\n access-class\
-      \ SSH-ADMIN in\n exec-timeout 0 0\n transport input ssh\n login local\n!\nntp source Vlan99\nntp server 10.10.99.10\
-      \ prefer\n!\nend"
+      \ bpduguard enable\n!\ninterface Ethernet1/3\n shutdown\n!\ninterface Vlan99\n ip address 10.20.99.11 255.255.255.0\n\
+      !\nip default-gateway 10.20.99.1\nip forward-protocol nd\nip forward-protocol udp\n!\n!\nno ip http server\nno ip http\
+      \ secure-server\nip ssh bulk-mode 131072\n!\nip access-list standard SSH-ADMIN\n 10 permit 10.10.99.0 0.0.0.255\n 20\
+      \ permit 10.20.99.0 0.0.0.255\n 30 deny any log\n!\nno logging btrace\nlogging source-interface Vlan99\nlogging host\
+      \ 10.10.50.10\n!\n!\n!\ncontrol-plane\n!\n!\nbanner login #\nThis is a private computer network operated by Harbor Point\
+      \ Health Services. Access to\nthis network, its infrastructure, and all connected electronic systems is restricted\n\
+      solely to authorized individuals for legitimate business purposes.\n\nUnauthorized login, access, or use of this resource\
+      \ is strictly prohibited. It is\nsubject to civil, criminal, and administrative penalties.\n\nBy attempting to log in,\
+      \ you explicitly acknowledge and agree that:\n\n* You are an authorized user acting within your permitted scope.\n\n\
+      * You have no expectation of privacy regarding any activity on this network.\n\n* All activities, communications, and\
+      \ data may be monitored, intercepted, recorded,\nread, or copied by authorized personnel.\n\n* Evidence of unauthorized\
+      \ use or illegal activity will be disclosed to corporate\nmanagement and law enforcement officials.\n\nIf you are not\
+      \ an authorized user of this system, DISCONNECT IMMEDIATELY.\n#\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n\
+      \ login local\nline aux 0\nline vty 0 4\n access-class SSH-ADMIN in\n exec-timeout 0 0\n transport input ssh\n login\
+      \ local\n!\nntp source Vlan99\nntp server 10.10.50.10 prefer\n!\nend"
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -1691,7 +1308,7 @@ nodes:
       service timestamps debug datetime localtime
       service timestamps log datetime localtime
       !
-      hostname TOLY-R1
+      hostname OLY-R1
       !
       enable secret 0 cisco1
       username cisco privilege 15 secret 0 cisco1
@@ -1831,7 +1448,7 @@ nodes:
        shutdown
       !
       interface Ethernet1/1
-       description TAC-FW1
+       description OLY-FW1
        ip address 198.51.100.5 255.255.255.252
        ip nat inside
       !
@@ -1855,6 +1472,7 @@ nodes:
         network 10.20.255.1 mask 255.255.255.255
         network 198.51.100.6 mask 255.255.255.255
         neighbor 172.31.255.1 activate
+        neighbor 172.31.255.1 prefix-list REMOTE-TAC in
        exit-address-family
       !
       ip forward-protocol nd
@@ -1891,7 +1509,8 @@ nodes:
        10 remark list of allowed TAC IPs
        10 permit ip host 172.31.255.1 host 172.31.255.2
        20 permit ip 10.10.10.0 0.0.0.255 any
-       30 permit ip 10.10.30.0 0.0.0.255 any
+       30 permit ip 10.10.20.0 0.0.0.255 any
+       35 permit ip 10.10.50.0 0.0.0.255 any
        40 permit ip 10.10.99.0 0.0.0.255 any
        50 permit ip host 10.10.255.1 any
        60 permit ip host 198.51.100.2 any
@@ -1930,23 +1549,27 @@ nodes:
        70 permit ip any any
       !
       ip prefix-list REMOTE-TAC seq 10 permit 10.10.10.0/24
-      ip prefix-list REMOTE-TAC seq 20 permit 10.10.30.0/24
+      ip prefix-list REMOTE-TAC seq 20 permit 10.10.20.0/24
+      ip prefix-list REMOTE-TAC seq 25 permit 10.10.50.0/24
       ip prefix-list REMOTE-TAC seq 30 permit 10.10.99.0/24
       ip prefix-list REMOTE-TAC seq 40 permit 10.10.255.1/32
       ip prefix-list REMOTE-TAC seq 50 permit 198.51.100.2/32
       no logging btrace
       logging source-interface Loopback0
-      logging host 10.10.99.10
+      logging host 10.10.50.10
       !
       !
       !
       control-plane
       !
       !
-      banner login ^CCC
-      This is a private computer network operated by Harbor Point Health Services. Access to this network, its infrastructure, and all connected electronic systems is restricted solely to authorized individuals for legitimate business purposes.
+      banner login #
+      This is a private computer network operated by Harbor Point Health Services. Access to
+      this network, its infrastructure, and all connected electronic systems is restricted
+      solely to authorized individuals for legitimate business purposes.
 
-      Unauthorized login, access, or use of this resource is strictly prohibited. Itis subject to civil, criminal, and administrative penalties.
+      Unauthorized login, access, or use of this resource is strictly prohibited. It is
+      subject to civil, criminal, and administrative penalties.
 
       By attempting to log in, you explicitly acknowledge and agree that:
 
@@ -1954,13 +1577,14 @@ nodes:
 
       * You have no expectation of privacy regarding any activity on this network.
 
-      * All activities, communications, and data may be monitored, intercepted, recorded, read, or copied by authorized personnel.
+      * All activities, communications, and data may be monitored, intercepted, recorded,
+      read, or copied by authorized personnel.
 
-      * Evidence of unauthorized use or illegal activity will be disclosed to corporate management and law enforcement officials.
-
+      * Evidence of unauthorized use or illegal activity will be disclosed to corporate
+      management and law enforcement officials.
 
       If you are not an authorized user of this system, DISCONNECT IMMEDIATELY.
-      ^C
+      #
       !
       line con 0
        exec-timeout 0 0
@@ -1974,7 +1598,7 @@ nodes:
        login local
       !
       ntp source Loopback0
-      ntp server 10.10.99.10 prefer
+      ntp server 10.10.50.10 prefer
       !
       !
       !
@@ -2028,7 +1652,42 @@ nodes:
     type: physical
     slot: 5
 - boot_disk_size: null
-  configuration: []
+  configuration:
+  - name: user-data
+    content: |
+      #cloud-config
+      hostname: TAC-Services
+      manage_etc_hosts: true
+      users:
+      - name: cisco
+        groups:
+        - sudo
+        shell: /bin/bash
+        sudo: ALL=(ALL) ALL
+        lock_passwd: false
+      chpasswd:
+        expire: false
+        users:
+        - name: cisco
+          password: cisco1
+          type: text
+  - name: network-config
+    content: |
+      network:
+        version: 2
+        ethernets:
+          ens2:
+            dhcp4: false
+            dhcp6: false
+            addresses:
+            - 10.10.50.10/24
+            routes:
+            - to: default
+              via: 10.10.50.1
+            nameservers:
+              addresses:
+              - 1.1.1.1
+              - 1.0.0.1
   cpu_limit: null
   cpus: null
   data_volume: null
@@ -2231,7 +1890,7 @@ nodes:
        ip address 10.10.255.1 255.255.255.255
       !
       interface Tunnel1
-       description HPHS IPsec to TAC-R1
+       description HPHS IPsec to OLY-R1
        ip address 172.31.255.1 255.255.255.252
        ip mtu 1400
        ip access-group OLY-SOURCE-IN in
@@ -2284,7 +1943,8 @@ nodes:
        !
        address-family ipv4
         network 10.10.10.0 mask 255.255.255.0
-        network 10.10.30.0 mask 255.255.255.0
+        network 10.10.20.0 mask 255.255.255.0
+        network 10.10.50.0 mask 255.255.255.0
         network 10.10.99.0 mask 255.255.255.0
         network 10.10.255.1 mask 255.255.255.255
         network 198.51.100.2 mask 255.255.255.255
@@ -2299,11 +1959,12 @@ nodes:
       no ip http server
       no ip http secure-server
       ip nat inside source list NAT-INTERNET interface Ethernet0/0 overload
-      ip nat inside source static tcp 10.10.99.10 22 interface Ethernet0/0 2222
+      ip nat inside source static tcp 10.10.50.10 22 interface Ethernet0/0 2222
       ip route 0.0.0.0 0.0.0.0 203.0.113.1
       ip route 10.10.10.0 255.255.255.0 198.51.100.2
-      ip route 10.10.30.0 255.255.255.0 198.51.100.2
+      ip route 10.10.20.0 255.255.255.0 198.51.100.2
       ip route 10.10.40.0 255.255.255.0 198.51.100.2
+      ip route 10.10.50.0 255.255.255.0 198.51.100.2
       ip route 10.10.99.0 255.255.255.0 198.51.100.2
       ip route 198.51.100.2 255.255.255.255 Ethernet1/1 198.51.100.2
       ip ssh bulk-mode 131072
@@ -2324,8 +1985,9 @@ nodes:
        60 permit ip 10.10.20.0 0.0.0.255 any
        70 permit ip 10.10.40.0 0.0.0.255 any
        80 permit ip 10.10.99.0 0.0.0.255 any
+       90 permit ip 10.10.50.0 0.0.0.255 any
       ip access-list extended OLY-SOURCE-IN
-       10 remark list of allowed TAC IPs
+       10 remark list of allowed OLY IPs
        10 permit ip host 172.31.255.2 host 172.31.255.1
        20 permit ip 10.20.10.0 0.0.0.255 any
        30 permit ip 10.20.30.0 0.0.0.255 any
@@ -2334,7 +1996,7 @@ nodes:
        60 permit ip host 198.51.100.6 any
        70 deny ip any any log
       ip access-list extended WAN-IN
-       10 remark Allow IPsec and ESP from TAC-R1. Deny any other device
+       10 remark Allow IPsec and ESP from OLY-R1. Deny any other device
        10 permit udp host 203.0.113.6 host 203.0.113.2 eq isakmp
        20 permit udp host 203.0.113.6 host 203.0.113.2 eq non500-isakmp
        30 permit esp host 203.0.113.6 host 203.0.113.2
@@ -2351,8 +2013,8 @@ nodes:
        130 remark Avoid FW spoofing attempts from outside
        130 deny ip 198.51.100.0 0.0.0.7 any log
        140 remark Port forwarding for authorized ssh access to internal resources
-       140 permit tcp host 198.51.100.10 host 203.0.113.6 eq 2222
-       150 deny tcp any host 203.0.113.6 eq 2222 log
+       140 permit tcp host 198.51.100.10 host 203.0.113.2 eq 2222
+       150 deny tcp any host 203.0.113.2 eq 2222 log
        160 remark Allow internet traffic
        160 permit ip any any
       ip access-list extended WAN-OUT
@@ -2373,17 +2035,20 @@ nodes:
       ip prefix-list REMOTE-OLY seq 50 permit 198.51.100.6/32
       no logging btrace
       logging source-interface Loopback0
-      logging host 10.10.99.10
+      logging host 10.10.50.10
       !
       !
       !
       control-plane
       !
       !
-      banner login ^CCC
-      This is a private computer network operated by Harbor Point Health Services. Access to this network, its infrastructure, and all connected electronic systems is restricted solely to authorized individuals for legitimate business purposes.
+      banner login #
+      This is a private computer network operated by Harbor Point Health Services. Access to
+      this network, its infrastructure, and all connected electronic systems is restricted
+      solely to authorized individuals for legitimate business purposes.
 
-      Unauthorized login, access, or use of this resource is strictly prohibited. Itis subject to civil, criminal, and administrative penalties.
+      Unauthorized login, access, or use of this resource is strictly prohibited. It is
+      subject to civil, criminal, and administrative penalties.
 
       By attempting to log in, you explicitly acknowledge and agree that:
 
@@ -2391,13 +2056,14 @@ nodes:
 
       * You have no expectation of privacy regarding any activity on this network.
 
-      * All activities, communications, and data may be monitored, intercepted, recorded, read, or copied by authorized personnel.
+      * All activities, communications, and data may be monitored, intercepted, recorded,
+      read, or copied by authorized personnel.
 
-      * Evidence of unauthorized use or illegal activity will be disclosed to corporate management and law enforcement officials.
-
+      * Evidence of unauthorized use or illegal activity will be disclosed to corporate
+      management and law enforcement officials.
 
       If you are not an authorized user of this system, DISCONNECT IMMEDIATELY.
-      ^C
+      #
       !
       line con 0
        exec-timeout 0 0
@@ -2411,7 +2077,7 @@ nodes:
        login local
       !
       ntp source Loopback0
-      ntp server 10.10.99.10 prefer
+      ntp server 10.10.50.10 prefer
       !
       !
       !
