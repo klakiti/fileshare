@@ -1,0 +1,15 @@
+network:
+  version: 2
+  ethernets:
+    ens2:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 10.10.50.10/24
+      routes:
+        - to: default
+          via: 10.10.50.1
+      nameservers:
+        addresses:
+          - 1.1.1.1
+          - 1.0.0.1
